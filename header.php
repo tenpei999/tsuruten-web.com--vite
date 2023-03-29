@@ -30,7 +30,7 @@
         <section class="l-header__inner">
           <h1 class="c-margin-center p-header__logo">
             <a href="<?php echo esc_url(home_url('/')); ?>">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logojinuki.png" alt="WebエンジニアTsuruのポートフォリオサイトです。">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logojinuki.png" alt="WebエンジニアTsuruのポートフォリオサイトです。">
             </a>
           </h1>
 
