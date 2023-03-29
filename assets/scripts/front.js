@@ -24,7 +24,7 @@ function media() {
   if (width > 1200) {
     // 画面幅が1200pxより上の時
 
-    modalButton.parentNode.insertBefore(document.getElementById("modal-text"), modalButton.nextElementSibling);
+    // modalButton.parentNode.insertBefore(document.getElementById("modal-text"), modalButton.nextElementSibling);
 
   } else if (width <= 1200) {
     // 画面幅が1200px以下での時
@@ -37,7 +37,7 @@ function media() {
       list.classList.toggle('active');
     })
 
-    modalButtonClose.parentNode.insertBefore(document.getElementById("modal-text"), modalButtonClose.nextElementSibling);
+    // modalButtonClose.parentNode.insertBefore(document.getElementById("modal-text"), modalButtonClose.nextElementSibling);
 
     modalButton.addEventListener("click", () => {
       modalFadeOut.fadeIn();
