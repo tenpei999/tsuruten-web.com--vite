@@ -1,0 +1,11 @@
+@use "../Foundation/mixin" as m;
+@use "../Foundation/variable" as v;
+
+.l-wrapper{
+  display: flex;
+  flex-direction: column;
+  @include m.mq(screen012) {
+    flex-direction: row;
+    padding: 0 5vw;
+  }
+}

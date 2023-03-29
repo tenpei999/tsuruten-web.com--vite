@@ -1,0 +1,11 @@
+.l-search {
+  width: 100%;
+  min-height: 100vh;
+  .l-card__inner {
+    margin: 0 1rem;
+    &>article {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

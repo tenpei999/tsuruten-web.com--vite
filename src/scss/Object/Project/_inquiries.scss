@@ -1,0 +1,15 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+.p-inquiries {
+  margin: auto;
+  margin-top: 10rem;
+  width: 15rem;
+  box-shadow: 0 0 2px 1px #fff;
+  &__title {
+    padding-top: 0.5rem;
+  }
+  &__button {
+    padding-bottom: 0.5rem;
+  }
+}

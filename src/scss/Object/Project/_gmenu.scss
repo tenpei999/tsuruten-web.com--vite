@@ -1,0 +1,253 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+.p-gmenu {
+
+  @include m.mq (screen03) {
+    margin: 0 10vw;
+  }
+
+  &--inner {
+    li:first-of-type {
+      a {
+        position: absolute;
+        z-index: 1;
+      }
+      &::before {
+        border-right: solid 2px;
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 80%;
+        top: 30%;
+        @include m.mq (screen03) {
+          display: none;
+        }
+      }
+    }
+
+    @include m.mq (screen03) {
+      padding-top: 0.2rem;
+    }
+  }
+
+  //もくじ
+  &--table {
+    font-size: 2.5rem;
+    font-weight: v.$Medium;
+    text-align: center;
+    width: 15rem;
+    margin: 10rem 0 0 -2rem;
+    transition: all 0.5s;
+
+    @include m.mq (screen012) {
+      margin-left: 5rem;
+    }
+
+    @include m.mq (screen03) {
+      display: none;
+    }
+
+    //もくじボタン
+    .p-gmenu__button {
+      margin: auto;
+      position: relative;
+
+      p::before {
+        content: "タップで開く";
+        font-size: 1rem;
+        position: absolute;
+        display: block;
+        top: 3.5rem;
+        width: 100%;
+        height: 100%;
+        border-top: solid 1px;
+      }
+
+      &.active {
+        p {
+          filter: unset;
+          color: black;
+
+          &::before {
+            content: "タップでジャンプ";
+            font-size: 1rem;
+            position: absolute;
+            display: block;
+            top: 3.5rem;
+            left: -0.5rem;
+            width: 110%;
+            height: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  //メニュー項目pc画面
+  &__list {
+    display: flex;
+
+    @include m.mq (screen03) {
+      margin: unset;
+      padding: 1rem 1rem 0 0;
+      text-align: center;
+    }
+
+    .title {
+      z-index: 1000;
+    }
+
+    .item {
+      font-size: 1.3rem;
+      width: 50%;
+      text-align: center;
+      position: relative;
+
+      @include m.mq (screen03) {
+        width: 10rem;
+        text-align: unset;
+      }
+
+      .sub-menu {
+        height: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        margin-top: 1.14rem;
+
+        .item {
+          padding: 1rem 0 1rem 0;
+        }
+      }
+
+      &:hover {
+        .sub-menu {
+          height: 8rem;
+          opacity: 1;
+          transition: all 0.3s ease;
+          background-color: rgba($color: #fff, $alpha: 0.6);
+        }
+      }
+    }
+
+    //目次の内のメニュー項目
+    &.in-table {
+      z-index: 1200;
+      overflow: hidden;
+      transition: all 0.3s ease-in;
+      height: 0;
+      display: flex;
+      flex-direction: column;
+
+      &.active {
+        height: 25rem;
+        padding: 3rem 0 2rem 0;
+      }
+
+      .item {
+        font-size: 1.4rem;
+        text-align: left;
+        margin-left: 2rem;
+        width: unset;
+        line-height: 3;
+        display: flex;
+        #scene {
+          width:15px;
+          height:15px;
+          position:relative;
+          top:2rem;
+          transform:translateX(-50%) translateY(-50%);
+        }
+        .boxBase {
+          transform-style:preserve-3d;
+          width:15px;
+          height:15px;
+          animation: turnAround 30s linear 0s infinite normal none running;
+        }
+        @keyframes turnAround {
+          0%{
+            transform:rotateX(0deg) rotateY(0deg);
+          }
+          100%{
+            transform:rotateX(360deg) rotateY(360deg);
+          }
+        }
+        .boxBase > div {
+          position:absolute;
+          background-color:rgba(166, 164, 164, 0.7);
+          border:0.5px solid black;
+          width:100%;
+          height:100%;
+        }
+        .boxBase > .top {
+          transform:translateY(7.5px) rotateX(-90deg);
+        }
+        .boxBase > .bottom {
+          transform:translateY(-7.5px) rotateX(90deg);
+        }
+        .boxBase > .front {
+          transform:translateZ(7.5px);
+        }
+        .boxBase > .back {
+          transform:translateZ(-7.5px) rotateX(180deg);
+        }
+        .boxBase > .left {
+          transform:translateX(-7.5px) rotateY(-90deg);
+        }
+        .boxBase > .right {
+          transform:translateX(7.5px) rotateY(90deg);
+        }
+
+        .title {
+          font-size: 1.2rem;
+          color: v.$TextBlack;
+          line-height: 4rem;
+
+          a {
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    //子メニューがあるメニュー項目
+    .item3 {
+
+      //開閉マーク
+      &::before {
+        content: "＋";
+        position: absolute;
+        left: 25vw;
+      }
+
+      &.active::before {
+        content: "－";
+      }
+
+      @include m.mq(screen03) {
+        &::before {
+          content: "";
+          position: absolute;
+          right: 20px;
+        }
+
+        &.active::before {
+          content: "";
+        }
+      }
+    }
+  }
+
+  //pc画面ではメニューに表示させないメニューアイテム
+  .item1,
+  .item6,
+  .item7 {
+    @include m.mq (screen03) {
+      display: none;
+    }
+  }
+}

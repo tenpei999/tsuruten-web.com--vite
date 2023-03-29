@@ -1,0 +1,13 @@
+@use "../Foundation/mixin" as m;
+
+.l-header {
+  z-index: 1000;
+  top: 0;
+  &__inner {
+    margin: 0 10vw;
+    @include m.mq (screen03) {
+      position: static;
+      display: flex;
+    }
+  }
+}

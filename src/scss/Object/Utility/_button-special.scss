@@ -1,0 +1,172 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+.u-button-special {
+  &.soap_wrap {
+    position: relative;
+    margin: auto;
+    top: -15px;
+    left: 10px;
+    width: 30vw; /*お好みで*/
+    height: 30vw; /*お好みで*/
+    @include m.mq (screen012) {
+      width: 130px;
+      height: 130px;
+    }
+  }
+  .soap {
+    position: absolute;
+    width: 100%; /*お好みで*/
+    height: 100%; /*お好みで*/
+    border-radius: 50% 50% 50% 50%;
+    font-size: 1.4rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(at 46% 54%, transparent 50%, rgba(2, 172, 253,0.3) 70%, transparent 100%) 50% 50% no-repeat;
+    z-index: 1; /*Safariでborder-radiusとanimationを併用するとoverflow: hidden;が効かなくなるバグの対処*/
+    animation: bubble 1s infinite;
+    transition: width 0.5s;
+    &.is-404 {
+      font-size: 1.2rem;
+    }    
+    &:hover {
+      &::before {
+        transition: width 0.5s;
+        width: 80%;
+      }
+      &::after {
+        width: 40%;
+        transition: width 0.5s;
+      }
+    }
+  }
+  .soap::before{
+    content: "";
+    position: absolute;
+    right: -10%;
+    bottom: -10%;
+    width: 60%;
+    height: 60%;
+    border-radius: 60% 0;
+    background: radial-gradient(at 0 0, rgba(0, 130, 255, 0.3) 40%, rgba(255, 154, 204, 0.7) 50%);
+    filter: blur(15px);
+    animation: bubbleRight 1s infinite;
+  }
+  .soap::after{
+    content: "";
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    width: 60%;
+    height: 60%;
+    border-radius: 20% 0;
+    background: radial-gradient(at 100% 100%, rgba(255, 255, 100, 0.5) 40%, rgba(120, 255, 140, 0.7) 60%);
+    filter: blur(15px);
+    animation: bubbleRight2 1s infinite;
+  }
+  @include m.mq (screen03) {
+    &:hover {
+      z-index: 1;
+      color: azure;
+      transition: all 0.4s;
+      box-shadow: unset;
+      &::before {
+        width: 70%;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 85%;
+    top: -0rem;
+    rotate: 35deg;
+    animation: poking 1s ease-in infinite;
+    &.is-404 {
+      @include m.mq(screen012) {
+        left: 85%;
+      }
+    }
+    @include m.mq(screen012) {
+      left: 66%;
+    }
+  }
+}
+
+@keyframes bubble {
+  from {
+    border-radius: 50% 50% 50% 50%;
+  }
+  5% {
+    border-radius: 50% 50% 50% 50%;
+  }
+  17.5% {
+    border-radius: 30% 70% 50% 45%;
+  }
+  25% {
+    border-radius: 35% 40% 50% 30%;
+  }
+  30% {
+    border-radius: 40% 60% 50% 45%;
+  } 
+  42.5% {
+    border-radius: 60% 50% 70% 70%;
+  }
+  55% {
+    border-radius: 50% 50% 50% 60%;
+  }
+  to {
+    border-radius: 50% 50% 50% 50%;
+  }
+}
+@keyframes bubbleRight {
+  from {
+    width: 60%;
+  }
+  5% {
+    width: 60%;
+  }
+  17.5% {
+    width: 80%;
+  }
+  to {
+    width: 60%;
+  }
+}
+@keyframes bubbleRight2 {
+  from {
+    width: 60%;
+  }
+  5% {
+    width: 60%;
+  }
+  17.5% {
+    width: 80%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes poking {
+  from {
+    rotate: 35deg;
+  }
+  11.5% {
+    rotate: 35deg;
+  }
+  12.5% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: 0deg;
+  }
+  26% {
+    rotate: 35deg;
+  } 
+  to {
+    rotate: 35deg;
+  }
+}

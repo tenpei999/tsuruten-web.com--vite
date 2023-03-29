@@ -1,0 +1,456 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+.p-animation-background {
+  overflow: hidden;
+  height: 3076px;
+  max-width: 1920px;
+  &__layer {
+    position: relative;
+    margin-left: calc(calc(100% - 1900px) * 0.5);
+    transition: all 1s ease-in;
+    .layer-1 {
+    position: absolute;
+    display: block;
+    top: 140px;
+    width: 1920px;
+    height: 3076px;
+    background: url(../img/yama-baseNew.jpg) bottom no-repeat;
+    background-size: 3076px 1920px;
+    z-index: 200;
+    &__inner {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 2000px;
+      height: 200px;
+      top: 1200px;
+      -webkit-filter: blur(10px);
+      filter: blur(100px);
+      z-index: 201;
+      background-color: rgb(42,117,180);
+    }
+
+    }
+    .layer-2 {
+      position: absolute;
+      display: block;
+      margin-top: 3030px;
+      width: 1585px;
+      height: 681px;
+      background: url(../img/yama-front.png) center / cover;
+      z-index: 400;
+      &.lower,
+      &.upper {
+        transition: 0.5s;
+      }
+    }
+
+    .layer-2-2 {
+      position: absolute;
+      display: block;
+      margin-top: 2660px;
+      width: 1950px;
+      height: 717px;
+      background: url(../img/yama-second.png) center /cover;
+      z-index: 300;
+
+      &.lower,
+      &.upper {
+        transition: 0.5s;
+      }
+    }
+
+    .layer-2-3 {
+      position: absolute;
+      display: block;
+      margin-top: 2500px;
+      top: 190px;
+      left: 1000px;
+      width: 914px;
+      height: 587px;
+      background: url(../img/yama-third.png) center / cover;
+      z-index: 200;
+      &.lower,
+      &.upper {
+        transition: 0.5s;
+      }
+    }
+
+    .layer-4 {
+      position: absolute;
+      height: 500px;
+      width: 500px;
+      top: 1450px;
+      left: 500px;
+      background-image: url(../img/cloud-single.png);
+      display: block;
+      z-index: 300;
+      opacity: 1;
+      animation: gradually2 15s ease-in-out infinite;
+    }
+
+    .layer-5 {
+      position: absolute;
+      top: 1650px;
+      left: 330px;
+      background: url(../img/cloud-hide.png) no-repeat;
+      display: block;
+      height: 500px;
+      width: 2100px;
+      scale: 1.5 1.18;
+      z-index: 300;
+      opacity: blur(2px) brightness(100%);
+      filter: blur(2px) brightness(100%);
+      animation: gradually 24s ease-in-out infinite;
+    }
+
+    .layer-6 {
+      position: absolute;
+      top: 2300px;
+      left: 2000px;
+      background-color: rgba(255, 255, 255, 0.1);
+      filter: blur(10px) brightness(100%);
+      display: block;
+      height: 150px;
+      width: 100px;
+      transform: skew(142deg, 23deg);
+      z-index: 300;
+      animation: sun-light 18s 0s ease-out infinite;
+    }
+
+    .layer-7 {
+      position: absolute;
+      top: 2300px;
+      left: 1800px;
+      background-color: rgba(255, 255, 255, 0.1);
+      filter: blur(10px) brightness(100%);
+      display: block;
+      height: 150px;
+      width: 100px;
+      transform: skew(142deg, 23deg);
+      z-index: 300;
+      animation: sun-light2 14.4s 0s ease-out infinite;
+    }
+
+    .layer-8 {
+      position: absolute;
+      top: 2300px;
+      left: 1600px;
+      background-color: rgba(255, 255, 255, 0.1);
+      filter: blur(10px) brightness(100%);
+      display: block;
+      height: 150px;
+      width: 100px;
+      transform: skew(142deg, 23deg);
+      z-index: 300;
+      animation: sun-light3 10.8s 0s ease-out infinite;
+    }
+  }
+
+  &__child {
+    position: relative;
+
+    .layer-9 {
+      position: absolute;
+      top: 5rem;
+      left: 30%;
+      width: 10rem;
+      height: 10rem;
+      background:url(../img/cloud-highest.png) 0% / cover;
+      z-index: 400;
+      transition: all 4S 0s ease-in-out;
+      @include m.mq (screen02) {
+        left: 40%;
+      }
+    }
+
+    .layer-10 {
+      position: absolute;
+      display: block;
+      left: -45%;
+      width: 35rem;
+      height: 18rem;
+      background: url(../img/cloud-middle-flont.png) 0% / cover no-repeat;
+      z-index: 400;
+      opacity: 1;
+      transition: left 8S 0s ease-in-out;
+
+      @include m.mq (screen02) {
+        left: 5%;
+      }
+
+      @include m.mq (screen03) {
+        left: 10%;
+      }
+    }
+
+    .layer-11 {
+      position: absolute;
+      display: block;
+      left: 40%;
+      width: 57rem;
+      height: 30rem;
+      background: url(../img/cloud-middle2.png) 0% / cover;
+      z-index: 300;
+      transition: left 8S 0s ease-in-out;
+      @include m.mq (screen02) {
+        left: 25%;
+      }
+    }
+
+    .layer-12 {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      top: 15rem;
+      width: 100vw;
+      z-index: 400;
+      @include m.mq (screen012) {
+        width: 100%;
+        z-index: 300;
+      }
+      span {        
+        background: url(../img/portfolio.png) 0% / cover;     
+        display: block;
+        aspect-ratio: 50 / 9;
+        width: 100vw;
+        @include m.mq (screen012) {
+          width: 30rem;
+        }
+      }
+    }
+  }
+
+  @-webkit-keyframes sun-light {
+    from {
+      left: 2000px;
+      opacity: 1;
+      width: 100px;
+      transform: skew(142deg, 23deg);
+    }
+    90% {
+      opacity: 0.7;
+    }
+    to {
+      left: 1000px;
+      opacity: 0;
+      width: 50px;
+      transform: skew(120deg, 23deg);
+    }
+  }
+
+  @keyframes sun-light {
+    from {
+      left: 2000px;
+      opacity: 1;
+      width: 100px;
+      transform: skew(142deg, 23deg);
+    }
+    90% {
+      opacity: 0.7;
+    }
+    to {
+      left: 1000px;
+      opacity: 0;
+      width: 50px;
+      transform: skew(120deg, 23deg);
+    }
+  }
+
+  @-webkit-keyframes sun-light2 {
+    from {
+      left: 1800px;
+      opacity: 1;
+      width: 100px;
+      transform: skew(142deg, 23deg);
+    }
+    90% {
+      opacity: 0.7;
+    }
+    to {
+      left: 1000px;
+      opacity: 0;
+      width: 50px;
+      transform: skew(120deg, 23deg);
+    }
+  }
+
+  @keyframes sun-light2 {
+    from {
+      left: 1800px;
+      opacity: 1;
+      width: 100px;
+      transform: skew(142deg, 23deg);
+    }
+    90% {
+      opacity: 0.7;
+    }
+    to {
+      left: 1000px;
+      opacity: 0;
+      width: 50px;
+      transform: skew(120deg, 23deg);
+    }
+  }
+
+  @-webkit-keyframes sun-light3 {
+    from {
+      left: 1600px;
+      opacity: 1;
+      width: 100px;
+      transform: skew(142deg, 23deg);
+    }
+    90% {
+      opacity: 0.7;
+    }
+    to {
+      left: 1000px;
+      opacity: 0;
+      width: 50px;
+      transform: skew(120deg, 23deg);
+    }
+  }
+
+  @keyframes sun-light3 {
+    from {
+      left: 1600px;
+      opacity: 1;
+      width: 100px;
+      transform: skew(142deg, 23deg);
+    }
+    90% {
+      opacity: 0.7;
+    }
+    to {
+      left: 1000px;
+      opacity: 0;
+      width: 50px;
+      transform: skew(120deg, 23deg);
+    }
+  }
+
+  @-webkit-keyframes cloud-moving {
+    from {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes cloud-moving {
+    from {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes cloud-moving2 {
+    from {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes cloud-moving2 {
+    from {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes cloud-moving3 {
+    from {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes cloud-moving3 {
+    from {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes gradually {
+    from {
+      opacity: 0;
+      -webkit-filter: blur(2px) brightness(100%);
+      filter: blur(2px) brightness(100%);
+    }
+    70% {
+      opacity: 1;
+      -webkit-filter: blur(5px) brightness(97.5%);
+      filter: blur(5px) brightness(97.5%);
+    }
+    to {
+      opacity: 0;
+      -webkit-filter: blur(2px) brightness(100%);
+      filter: blur(2px) brightness(100%);
+    }
+  }
+
+  @keyframes gradually {
+    from {
+      opacity: 0;
+      -webkit-filter: blur(2px) brightness(100%);
+      filter: blur(2px) brightness(100%);
+    }
+    70% {
+      opacity: 1;
+      -webkit-filter: blur(5px) brightness(97.5%);
+      filter: blur(5px) brightness(97.5%);
+    }
+    to {
+      opacity: 0;
+      -webkit-filter: blur(2px) brightness(100%);
+      filter: blur(2px) brightness(100%);
+    }
+  }
+
+  @keyframes gradually2 {
+    from {
+      filter: blur(0px);
+    }
+    50% {
+      filter: blur(5px);
+    }
+    to {
+      filter: blur(0px);
+    }
+  }
+}
+
+::-webkit-full-page-media, :future, :root .p-animation-background__layer .layer-1__inner{
+  filter: blur(20px);
+}

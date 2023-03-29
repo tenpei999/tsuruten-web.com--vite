@@ -1,0 +1,61 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+.p-posts {
+  margin-top: 8rem;
+  color: #fff;
+  &.c-background--widget {
+    background-color: unset;
+    box-shadow: unset;
+  }
+  .c-title--section {
+    font-size: 1.3rem;
+    font-family: v.$Widget;
+    position: relative;
+    padding-left: 1rem;
+    color: unset;
+  }
+  &__inner {
+    padding-top: 0.5rem;
+    li {
+      display: flex;
+      flex-direction: column;
+      padding: 0.1rem 1rem 0.1rem 1rem;
+      @include m.mq (screen03) {
+        padding: 0 1rem;
+      }
+      .post-title {
+        flex-basis: 70%;
+        font-size: 0.9rem;
+        font-weight: 500;
+        @include m.mq (screen03) {
+          font-size: 0.7rem;
+        }
+        a {
+          display: flex;
+        }
+        p {
+          border-bottom: 2px solid;
+        }
+      }
+      .post-right {
+        flex-basis: 30%;
+        font-weight: 500;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        .date {
+          font-family: v.$Table;
+          font-size: 0.8rem;
+        }
+        .new {
+          padding-left: 0.5rem;
+          font-size: 1rem;
+        }
+      } 
+    }
+  }
+  &.black{
+    color: v.$TextBlack;
+  } 
+}

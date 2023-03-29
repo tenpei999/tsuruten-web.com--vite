@@ -1,0 +1,45 @@
+@use "../Foundation/mixin" as m;
+@use "../Foundation/variable" as v;
+
+.l-main {
+  position: absolute;
+  z-index: 500;
+  transform: translateX(-25%);
+  height: 2700px;
+  width: 100vw;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  top: 0;
+  left: 25%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  &--custom-post {
+    margin-top: -32px;
+    width: 100vw;
+  }
+  &--post {
+    width: 100vw;
+    padding: 1rem 5%;
+  }
+  &--products {
+    padding: 1rem 5%;
+    @include m.mq(screen012) {
+      width: 67.5vw;
+      padding: 1rem 0;
+      margin:1rem 2.5vw 1rem 0;
+    }  
+  }
+  &--is-404 {
+    width: 100%;
+    height: 100vh;
+  }
+
+  @include m.mq (screen012) {
+    transform: translateX(0);
+    width: 400px;
+    left: calc((100vw - 400px) * 0.5);
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

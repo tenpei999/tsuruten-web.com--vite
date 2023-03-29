@@ -1,0 +1,77 @@
+@use "../../Foundation/variable" as v;
+@use "../../Foundation/mixin" as m;
+
+.p-card {
+  flex-direction: column;
+  font-size: 1rem;
+  margin: 0;
+  padding: 3rem 0;
+  gap: 2rem;
+  &:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  @include m.mq (screen011) {
+    flex-direction: row;
+  }
+  .img {
+    flex-basis: 25%;
+    aspect-ratio: 3 / 2;
+    display: flex;
+    transition: all 0.5s;
+    &:active {
+      transform: scale(1.05);
+      transition: all 0.5s;
+      filter: drop-shadow(10px 5px 5px rgba($color: #000000, $alpha: 0.2));
+    }
+    @include m.mq (screen011) {
+      &:active {
+        transform: unset;
+        filter: unset;
+      }
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.5s;
+        filter: drop-shadow(10px 5px 5px rgba($color: #000000, $alpha: 0.2));
+      }
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .c-card {
+    &__contents-area {
+      display: block;
+      flex-basis: 75%;
+    }
+    &__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding-bottom: 0.5rem;
+      transition: all 0.5s;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        transform: scale(1.01);
+        transition: all 0.5s;
+      }
+    }
+    &__text-area {
+      .category-list {
+        display: flex;
+        >li {
+          padding-right: 1rem;
+        }
+      }
+      .text {
+        padding-left: 0.5rem;
+        &>h2,
+        h3,
+        h4,
+        p {
+          display: inline;
+        }
+      }
+    }
+  }
+}
