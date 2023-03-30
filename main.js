@@ -6,4 +6,5 @@ import './assets/scripts/slider.js';
 import.meta.glob( [
 	'./assets/images/**',
 ] );
-
+// import './swiper/swiper-bundle.min.js';
+// import './swiper/css/swiper-bundle.min.css';

@@ -1,3 +1,9 @@
+import Swiper from 'swiper/bundle';
+
+import 'swiper/css/bundle';
+
+console.log(swiper);
+
 const swiper = new Swiper('.swiper', {
 
   // Optional parameters
@@ -63,7 +69,6 @@ const swiperConcept = new Swiper('.swiper-concept', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
-
 
   on: {
     // 切り替わりのアニメーションが終了したとき
