@@ -50,6 +50,10 @@ function cors_http_header() {
 }
 add_action( 'send_headers', 'cors_http_header' );
 
+function load_swiper() {
+  wp_enqueue_script( 'swiper', get_template_directory_uri() . '/node_modules/swiper/swiper-bundle.js', array(), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'load_swiper' );
 
 add_action( 'wp_enqueue_scripts', function() {
 	if ( defined( 'IS_VITE_DEVELOPMENT') && IS_VITE_DEVELOPMENT === true ) {
