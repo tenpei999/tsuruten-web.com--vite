@@ -50,8 +50,53 @@ function cors_http_header() {
 }
 add_action( 'send_headers', 'cors_http_header' );
 
+function  readScript()
+{
+  wp_enqueue_script('bundle', get_theme_file_uri() . '/assets/scripts/main.js', array(), '1.0.0', true);
+
+  $tmp_path_arr = [
+    'temp_uri' => get_template_directory_uri(),
+  ];
+
+  if (is_page('concept')) {
+    $script_path = '/assets/scripts/concept.js';
+
+    wp_enqueue_script(
+      'bundle2',
+      get_theme_file_uri() . $script_path,
+      [],
+      '1.0.0',
+      true
+    );
+    wp_localize_script('bundle2', 'tmp_path', $tmp_path_arr);
+  }
+  if (is_front_page()) {
+    $script_path = '/assets/scripts/front.js';
+
+    wp_enqueue_script(
+      'bundle2',
+      get_theme_file_uri() . $script_path,
+      [],
+      '1.0.0',
+      true
+    );
+    wp_localize_script('bundle2', 'tmp_path', $tmp_path_arr);
+  }
+  wp_enqueue_style('swiper-css', get_theme_file_uri() . '/node_modules/swiper/swiper-bundle.min.css', array('cssStyle'), '1.0.0', false);
+  wp_enqueue_style('Noto+Sans+JP', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;900&display=swap', array());
+  wp_enqueue_style('Noto+Serif+JP', '//fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700&display=swap', array());
+  wp_enqueue_style('Zen Maru Gothic', '//fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap', array());
+  wp_enqueue_style('M+PLUS+1', '//fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;600&display=swap', array());
+  wp_enqueue_style('Shippori Antique', '//fonts.googleapis.com/css2?family=Shippori+Antique&display=swap', array());
+  wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css', array(), '4.7.0');
+  wp_enqueue_style('cssStyle', get_template_directory_uri() . '/main.scss', array(), '1.0.0');
+}
+add_action('wp_enqueue_scripts', 'readScript');
+
+
 function load_swiper() {
-  wp_enqueue_script( 'swiper', get_template_directory_uri() . '/node_modules/swiper/swiper-bundle.js', array(), '1.0.0', true );
+  wp_enqueue_script( 'swiper-js', get_template_directory_uri() . '/node_modules/swiper/swiper-bundle.min.js', array(), '1.0.0', true );
+  wp_enqueue_script('slider-script', get_theme_file_uri() . '/assets/scripts/slider.js', array('swiper-js'), '1.0.0', true);
 }
 add_action( 'wp_enqueue_scripts', 'load_swiper' );
 

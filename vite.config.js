@@ -39,7 +39,7 @@ export default defineConfig({
 						return 'assets/js/[name].[ext]';
 					}
 					return 'assets/[name].[ext]';
-				}
+				},
 			},
 		},
 		assetsInlineLimit: 0,

@@ -1,12 +1,5 @@
-import Swiper from 'swiper/bundle';
-
-import 'swiper/css/bundle';
-
-console.log(swiper);
-
 const swiper = new Swiper('.swiper', {
 
-  // Optional parameters
   direction: 'horizontal',
   loop: true,
 
@@ -26,7 +19,6 @@ const swiper = new Swiper('.swiper', {
     rotate: 50,
     stretch: 0,
     depth: 100,
-    modifier: 1,
     slideShadows: true,
   },
 
@@ -66,9 +58,9 @@ const swiperConcept = new Swiper('.swiper-concept', {
     prevEl: '.swiper-button-prev',
   },
   // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
 
   on: {
     // 切り替わりのアニメーションが終了したとき

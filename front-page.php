@@ -375,7 +375,7 @@
           <p class="c-title--section c-margin-center">お問い合わせ</p>
         </h2>
         <article class="p-contact__form">
-          <?php echo apply_shortcodes('[contact-form-7 id="2298" title="お問合せフォーム"]'); ?>
+          <?php echo apply_shortcodes('[contact-form-7 id="3515" title="お問合せフォーム"]'); ?>
         </article>
       </section>
       <!-- p-space-wide -->
