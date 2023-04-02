@@ -1,5 +1,6 @@
 const swiper = new Swiper('.swiper', {
 
+  // Optional parameters
   direction: 'horizontal',
   loop: true,
 
@@ -19,6 +20,7 @@ const swiper = new Swiper('.swiper', {
     rotate: 50,
     stretch: 0,
     depth: 100,
+    modifier: 1,
     slideShadows: true,
   },
 
@@ -32,6 +34,7 @@ const swiper = new Swiper('.swiper', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+
 });
 
 const swiperConcept = new Swiper('.swiper-concept', {
@@ -83,7 +86,7 @@ function swipe_action() {
 
   let bg3Obj = document.querySelector('.p-concept__bg.bg-3-before');
   let bg3Anime = {
-    'animation': 'Scale 10s ease-in', 
+    'animation': 'Scale 10s ease-in',
     'scale': '2.5'
   }
 
@@ -96,7 +99,7 @@ function swipe_action() {
 
 function swipe_actionText() {
   media();
-  window.addEventListener("resize", function() {
+  window.addEventListener("resize", function () {
     media();
   });
 
