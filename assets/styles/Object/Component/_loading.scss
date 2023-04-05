@@ -3,7 +3,6 @@
   margin-top: -1rem;
   width: 100vw;
   height: 110vh;
-  transition: all 2s;
   background-color: #2774B4;
   position: fixed;
   top: 0;
@@ -13,12 +12,11 @@
 
 .loaded {
   opacity: 0;
+  transition: all 3s;
   visibility: hidden;
+  animation: sk-scaleout 3s infinite ease-in-out;
 }
 
-.spinner {
-  animation: sk-scaleout 2s infinite ease-in-out;
-}
 /* ローディングアニメーション */
 @keyframes sk-scaleout {
   0% {
