@@ -325,7 +325,7 @@
                 $page = get_page_by_path('chunta', OBJECT, 'product');
                 $permalink = get_permalink($page->ID);; ?>
                 <a href="<?php echo $permalink; ?>">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/bird.png" alt="アイキャッチ画像" class="img">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/bird.png" alt="アイキャッチ画像" class="img">
                 </a>
                 <section class="card">
                   <div class="card-body">
