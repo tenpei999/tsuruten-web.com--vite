@@ -51,7 +51,7 @@
 
           <h1 class="p-intro__logo">
             <div>
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/tsuruten_logo20230124-2.png" alt="tsuruten-web.com" class="c-margin-center">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/tsuruten_logo20230124-2.png" alt="tsuruten-web.com" class="c-margin-center">
             </div>
           </h1>
 
@@ -63,7 +63,7 @@
                 ?>">Concept
               </a>
             </div>
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/crow.png" alt="好奇心旺盛なカラス" class="u-button-special__img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/crow.png" alt="好奇心旺盛なカラス" class="u-button-special__img">
           </article>
           <!-- button-group -->
 
@@ -195,7 +195,7 @@
             <ul class="cell">
               <li class="cell__li">
                 <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icons8-html-5-96.png" alt="html" class="icon">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/icons8-html-5-96.png" alt="html" class="icon">
                 </div>
                 <h5 class="title">
                   <p class="c-title--content">html</p>
@@ -211,7 +211,7 @@
               </li>
               <li class="cell__li">
                 <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icons8-css3-96.png" alt="css" class="icon">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/icons8-css3-96.png" alt="css" class="icon">
                 </div>
                 <h5 class="title">
                   <p class="c-title--content">css</p>
@@ -228,7 +228,7 @@
               </li>
               <li class="cell__li">
                 <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icons8-jquery-50.png" alt="jQuery" class="icon">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/icons8-jquery-50.png" alt="jQuery" class="icon">
                 </div>
                 <h5 class="title">
                   <p class="c-title--content">jQuery</p>
@@ -246,7 +246,7 @@
               </li>
               <li class="cell__li">
                 <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icons8-ワードプレス-96.png" alt="WordPress" class="icon">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/icons8-ワードプレス-96.png" alt="WordPress" class="icon">
                 </div>
                 <h5 class="title">
                   <p class="c-title--content">WordPress</p>
@@ -264,7 +264,7 @@
               </li>
               <li class="cell__li">
                 <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/github-mark.png" alt="GitHub" class="icon">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/github-mark.png" alt="GitHub" class="icon">
                 </div>
                 <h5 class="title">
                   <p class="c-title--content">git/GitHub</p>
@@ -281,7 +281,7 @@
               </li>
               <li class="cell__li">
                 <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icons8-adobe-64.png" alt="adobe" class="icon">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/icons8-adobe-64.png" alt="adobe" class="icon">
                 </div>
                 <h5 class="title">
                   <p class="c-title--content">AdobeCC</p>
@@ -346,7 +346,7 @@
                 $permalink = get_permalink($page->ID);
                 ?>
                 <a href="<?php echo $permalink; ?>">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/publicdomainq-0011230agtryf-1.jpg" alt="アイキャッチ画像" class="img">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/publicdomainq-0011230agtryf-1.jpg" alt="アイキャッチ画像" class="img">
                 </a>
                 <section class="card">
                   <div class="card-body">
