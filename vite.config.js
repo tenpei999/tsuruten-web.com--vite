@@ -24,22 +24,22 @@ export default defineConfig({
 			input: {
 				main: path.resolve(__dirname + '/main.js'),			
 			},
-			output: {
-				entryFileNames: `assets/[name].js`,
-				chunkFileNames: `assets/[name].js`,
-				assetFileNames: ({ name }) => {
-					if (/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(name ?? '')) {
-						return 'assets/images/[name].[ext]';
-					}
-					if (/\.css$/.test(name ?? '')) {
-						return 'assets/css/[name].[ext]';
-					}
-					if (/\.js$/.test(name ?? '')) {
-						return 'assets/js/[name].[ext]';
-					}
-					return 'assets/[name].[ext]';
-				},
-			},
+      output: {
+        entryFileNames: 'assets/js/[name].js', // 変更点
+        chunkFileNames: 'assets/js/[name].js', // 変更点
+        assetFileNames: ({ name }) => {
+          if (/\.js$/.test(name ?? '')) {
+            return 'assets/js/[name].[ext]';
+          }
+          if (/\.css$/.test(name ?? '')) {
+            return 'assets/css/[name].[ext]';
+          }
+          if (/\.(gif|jpeg|jpg|png|svg|webp)$/.test(name ?? '')) {
+            return 'assets/images/[name].[ext]';
+          }
+          return 'assets/[name].[ext]';
+        },
+      },
 		},
 		assetsInlineLimit: 0,
 		minify: false,
