@@ -5,11 +5,11 @@
   z-index: 700;
 
   &.is-bright {
-    background: url(/wp-content/themes/tsuruten-web.com/assets/images/inoshishi_run1_negate.png) no-repeat center / contain;
+    background: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/inoshishi_run1_negate.png) no-repeat center / contain;
   }
 
   &.is-dark {
-    background: url(/wp-content/themes/tsuruten-web.com/assets/images/inoshishi-run1.png) no-repeat center / contain;
+    background: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/inoshishi-run1.png) no-repeat center / contain;
   }
 
   .is-bright,
@@ -97,10 +97,10 @@
 }
 
 .p-page-top.floatAnime {
-  background-image: url(/wp-content/themes/tsuruten-web.com/assets/images/inokichi.gif);
+  background-image: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/inokichi.gif);
 }
 .p-page-top.is-dark.floatAnime {
-  background-image: url(/wp-content/themes/tsuruten-web.com/assets/images/inokichiDark.gif);
+  background-image: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/inokichiDark.gif);
 }
 
 @keyframes floatShadow {

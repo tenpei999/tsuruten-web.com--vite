@@ -15,7 +15,7 @@
     top: 140px;
     width: 1920px;
     height: 3076px;
-    background: url(/wp-content/themes/tsuruten-web.com/assets/images/yama-baseNew.jpg) bottom no-repeat;
+    background: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/yama-baseNew.jpg) bottom no-repeat;
     background-size: 3076px 1920px;
     z-index: 200;
     &__inner {
@@ -38,7 +38,7 @@
       margin-top: 3030px;
       width: 1585px;
       height: 681px;
-      background: url(/wp-content/themes/tsuruten-web.com/assets/images/yama-front.png) center / cover;
+      background: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/yama-front.png) center / cover;
       z-index: 400;
       &.lower,
       &.upper {
@@ -52,7 +52,7 @@
       margin-top: 2660px;
       width: 1950px;
       height: 717px;
-      background: url(/wp-content/themes/tsuruten-web.com/assets/images/yama-second.png) center /cover;
+      background: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/yama-second.png) center /cover;
       z-index: 300;
 
       &.lower,
@@ -69,7 +69,7 @@
       left: 1000px;
       width: 914px;
       height: 587px;
-      background: url(/wp-content/themes/tsuruten-web.com/assets/images/yama-third.png) center / cover;
+      background: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/yama-third.png) center / cover;
       z-index: 200;
       &.lower,
       &.upper {
@@ -83,7 +83,7 @@
       width: 500px;
       top: 1450px;
       left: 500px;
-      background-image: url(/wp-content/themes/tsuruten-web.com/assets/images/cloud-single.png);
+      background-image: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/cloud-single.png);
       display: block;
       z-index: 300;
       opacity: 1;
@@ -94,7 +94,7 @@
       position: absolute;
       top: 1650px;
       left: 330px;
-      background: url(/wp-content/themes/tsuruten-web.com/assets/images/cloud-hide.png) no-repeat;
+      background: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/cloud-hide.png) no-repeat;
       display: block;
       height: 500px;
       width: 2100px;
@@ -157,7 +157,7 @@
       left: 30%;
       width: 10rem;
       height: 10rem;
-      background:url(/wp-content/themes/tsuruten-web.com/assets/images/cloud-highest.png) 0% / cover;
+      background:url(/wp-content/themes/tsuruten-web.com/dist/assets/images/cloud-highest.png) 0% / cover;
       z-index: 400;
       transition: all 4S 0s ease-in-out;
       @include m.mq (screen02) {
@@ -171,7 +171,7 @@
       left: -45%;
       width: 35rem;
       height: 18rem;
-      background: url(/wp-content/themes/tsuruten-web.com/assets/images/cloud-middle-flont.png) 0% / cover no-repeat;
+      background: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/cloud-middle-flont.png) 0% / cover no-repeat;
       z-index: 400;
       opacity: 1;
       transition: left 8S 0s ease-in-out;
@@ -191,7 +191,7 @@
       left: 40%;
       width: 57rem;
       height: 30rem;
-      background: url(/wp-content/themes/tsuruten-web.com/assets/images/cloud-middle2.png) 0% / cover;
+      background: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/cloud-middle2.png) 0% / cover;
       z-index: 300;
       transition: left 8S 0s ease-in-out;
       @include m.mq (screen02) {
@@ -211,7 +211,7 @@
         z-index: 300;
       }
       span {        
-        background: url(/wp-content/themes/tsuruten-web.com/assets/images/portfolio.png) 0% / cover;     
+        background: url(/wp-content/themes/tsuruten-web.com/dist/assets/images/portfolio.png) 0% / cover;     
         display: block;
         aspect-ratio: 50 / 9;
         width: 100vw;
