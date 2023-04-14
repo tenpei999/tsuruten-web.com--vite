@@ -8,8 +8,9 @@ import glob from "glob";
 import path from "path";
 import fs from "fs";
 
-const themePath = '/wp-content/themes/tsuruten-web.com';
-const assets = process.env.NODE_ENV === 'development' ? '/' : '/dist/';
+// const themePath = '/wp-content/themes/tsuruten-web.com';
+const themePath = process.env.NODE_ENV === '/wp-content/themes/tsuruten-web.com' ? '/' : '';
+const assets = process.env.NODE_ENV === 'development' ? '/assets' : '../';
 
 export default defineConfig({
 	plugins: [
