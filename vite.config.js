@@ -8,6 +8,9 @@ import glob from "glob";
 import path from "path";
 import fs from "fs";
 
+const themePath = '/wp-content/themes/tsuruten-web.com';
+const assets = process.env.NODE_ENV === 'development' ? '/' : '/dist/';
+
 export default defineConfig({
 	plugins: [
 		liveReload(__dirname + '/**/*.php'),
@@ -28,16 +31,16 @@ export default defineConfig({
         entryFileNames: 'assets/js/[name].js', // 変更点
         chunkFileNames: 'assets/js/[name].js', // 変更点
         assetFileNames: ({ name }) => {
-          if (/\.js$/.test(name ?? '')) {
-            return 'assets/js/[name].[ext]';
-          }
-          if (/\.css$/.test(name ?? '')) {
-            return 'assets/css/[name].[ext]';
-          }
-          if (/\.(gif|jpeg|jpg|png|svg|webp)$/.test(name ?? '')) {
-            return 'assets/images/[name].[ext]';
-          }
-          return 'assets/[name].[ext]';
+					if ( /\.( gif|jpeg|jpg|png|svg|webp| )$/.test( name ?? '' ) ) {
+						return 'assets/images/[name].[ext]';
+					}
+					if ( /\.css$/.test( name ?? '' ) ) {
+						return 'assets/css/[name].[ext]';
+					}
+					if ( /\.js$/.test( name ?? '' ) ) {
+						return 'assets/js/[name].[ext]';
+					}
+					return 'assets/[name].[ext]';
         },
       },
 		},
@@ -55,6 +58,11 @@ export default defineConfig({
 		},
 	},
 	css: {
+		preprocessorOptions: {
+			scss: {
+				additionalData: `$base-dir: '` + themePath + assets + `';`,
+			},
+		},
 		postcss: {
 			plugins: [
 				postcssNesting,
