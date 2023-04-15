@@ -1,51 +1,4 @@
-import Swiper from "swiper";
 const main = "";
-const swiperBundle_min = "";
-if (!document.body.classList.contains("l-body_is-concept_page")) {
-  const pageTop = document.querySelector(".p-page-top");
-  const lMain = document.querySelector(".l-main");
-  const scrollListener = () => {
-    if (window.scrollY <= 0) {
-      pageTop.classList.remove("floatAnime");
-      window.removeEventListener("scroll", scrollListener);
-    }
-  };
-  pageTop.addEventListener("click", () => {
-    pageTop.classList.add("floatAnime");
-    window.addEventListener("scroll", scrollListener);
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-    setTimeout(() => {
-      lMain.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }, 100);
-  });
-  "scroll load".split(" ").forEach((inokichiDown) => {
-    window.addEventListener(inokichiDown, () => {
-      const winHeight = window.pageYOffset;
-      const pageTop2 = document.querySelector(".p-page-top");
-      if (winHeight >= 100) {
-        pageTop2.classList.add("UpMove");
-        pageTop2.classList.remove("DownMove");
-      } else {
-        pageTop2.classList.remove("UpMove");
-        pageTop2.classList.add("DownMove");
-      }
-    });
-  });
-  window.onload = function() {
-    const spinner = document.getElementById("loading");
-    spinner.classList.add("loaded");
-  };
-}
 if (document.body.classList.contains("l-body_is-front_page")) {
   new Swiper(".swiper", {
     // Optional parameters
@@ -153,6 +106,7 @@ if (document.body.classList.contains("l-body_is-concept_page")) {
       }
     }
   };
+  var swipe_action2 = swipe_action, swipe_actionText2 = swipe_actionText;
   const swiperConcept = new Swiper(".swiper-concept", {
     direction: "vertical",
     slidesPerView: 1,
@@ -187,6 +141,51 @@ if (document.body.classList.contains("l-body_is-concept_page")) {
   const flipAnimationOther = {
     "animation": "",
     "opacity": 0
+  };
+}
+if (!document.body.classList.contains("l-body_is-concept_page")) {
+  const pageTop = document.querySelector(".p-page-top");
+  const lMain = document.querySelector(".l-main");
+  const scrollListener = () => {
+    if (window.scrollY <= 0) {
+      pageTop.classList.remove("floatAnime");
+      window.removeEventListener("scroll", scrollListener);
+    }
+  };
+  pageTop.addEventListener("click", () => {
+    pageTop.classList.add("floatAnime");
+    window.addEventListener("scroll", scrollListener);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+    setTimeout(() => {
+      lMain.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }, 100);
+  });
+  "scroll load".split(" ").forEach((inokichiDown) => {
+    window.addEventListener(inokichiDown, () => {
+      const winHeight = window.pageYOffset;
+      const pageTop2 = document.querySelector(".p-page-top");
+      if (winHeight >= 100) {
+        pageTop2.classList.add("UpMove");
+        pageTop2.classList.remove("DownMove");
+      } else {
+        pageTop2.classList.remove("UpMove");
+        pageTop2.classList.add("DownMove");
+      }
+    });
+  });
+  window.onload = function() {
+    const spinner = document.getElementById("loading");
+    spinner.classList.add("loaded");
   };
 }
 if (document.body.classList.contains("l-body_is-front_page")) {
@@ -275,6 +274,7 @@ if (document.body.classList.contains("l-body_is-front_page")) {
       });
     });
   };
+  var media2 = media, init2 = init;
   window.onload = function() {
     const spinner = document.getElementById("loading");
     spinner.classList.add("loaded");
@@ -359,6 +359,7 @@ if (document.body.classList.contains("l-body_is-concept_page")) {
       context.lineTo(i, unit * y + xAxis);
     }
   };
+  var init2 = init, update2 = update, draw2 = draw, drawWave2 = drawWave, drawSine2 = drawSine;
   window.onload = function() {
     const spinner = document.getElementById("loading");
     spinner.classList.add("loaded");

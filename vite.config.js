@@ -24,9 +24,7 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: path.resolve(__dirname + '/main.js'),
-				swiper: path.resolve(__dirname + '/node_modules/swiper/swiper-bundle.min.js'),
 			},
-			external: ['swiper'],
 			output: {
 				entryFileNames: 'assets/js/[name].js',
 				chunkFileNames: 'assets/js/[name].js',
@@ -41,9 +39,6 @@ export default defineConfig({
 						return 'assets/js/[name].[ext]';
 					}
 					return 'assets/[name].[ext]';
-				},
-				globals: {
-					swiper: 'Swiper'
 				},
 			},
 		},

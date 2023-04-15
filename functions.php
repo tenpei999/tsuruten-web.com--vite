@@ -8,7 +8,7 @@
  */
 
 //develop mode config
-define( "IS_VITE_DEVELOPMENT", true );
+define( "IS_VITE_DEVELOPMENT", false );
 
 //define
 define( 'DIST_DEF', 'dist' );
@@ -58,6 +58,7 @@ function  readScript()
   wp_enqueue_style('M+PLUS+1', '//fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;600&display=swap', array());
   wp_enqueue_style('Shippori Antique', '//fonts.googleapis.com/css2?family=Shippori+Antique&display=swap', array());
   wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css', array(), '4.7.0');
+  wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), '6.8.14', true );
 
 }
 add_action('wp_enqueue_scripts', 'readScript');
@@ -94,13 +95,6 @@ add_action( 'wp_enqueue_scripts', function() {
 		}
 	}
 } );
-
-// function load_swiper() {
-//   wp_enqueue_script( 'swiper-js', get_stylesheet_directory_uri() . '/node_modules/swiper/swiper-bundle.min.js', array(), '1.0.0', true );
-//   wp_enqueue_script('slider-script', get_theme_file_uri() . '/assets/scripts/slider.js', array('swiper-js'), '1.0.0', true);
-//   wp_enqueue_style( 'swiper-css', get_stylesheet_directory_uri() . '/node_modules/swiper/swiper-bundle.min.css', array(), '1.0.0', false );
-// }
-// add_action( 'wp_enqueue_scripts', 'load_swiper' );
 
 /* ウイジェット追加
 ---------------------------------------------------------- */

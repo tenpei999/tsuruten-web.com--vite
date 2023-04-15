@@ -1,4 +1,3 @@
-import "./node_modules/swiper/swiper-bundle.min.js";
 import "./main.scss";
 import './assets/scripts/slider.js';
 import './assets/scripts/main.js';

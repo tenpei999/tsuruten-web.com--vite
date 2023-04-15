@@ -1,5 +1,3 @@
-import Swiper from 'swiper';
-
 if (document.body.classList.contains('l-body_is-front_page')) {
   const swiper = new Swiper('.swiper', {
 
