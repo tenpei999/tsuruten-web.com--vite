@@ -4,11 +4,8 @@ import liveReload from 'vite-plugin-live-reload';
 import autoprefixer from "autoprefixer";
 import postcssNesting from "postcss-nesting";
 import sassGlobImports from 'vite-plugin-sass-glob-import';
-import glob from "glob";
 import path from "path";
-import fs from "fs";
 
-// const themePath = '/wp-content/themes/tsuruten-web.com';
 const themePath = process.env.NODE_ENV === 'development' ? '/wp-content/themes/tsuruten-web.com' : '';
 const assets = process.env.NODE_ENV === 'development' ? '/assets/' : '../';
 
@@ -26,24 +23,29 @@ export default defineConfig({
 		target: 'es2018',
 		rollupOptions: {
 			input: {
-				main: path.resolve(__dirname + '/main.js'),			
+				main: path.resolve(__dirname + '/main.js'),
+				swiper: path.resolve(__dirname + '/node_modules/swiper/swiper-bundle.min.js'),
 			},
-      output: {
-        entryFileNames: 'assets/js/[name].js', // 変更点
-        chunkFileNames: 'assets/js/[name].js', // 変更点
-        assetFileNames: ({ name }) => {
-					if ( /\.( gif|jpeg|jpg|png|svg|webp| )$/.test( name ?? '' ) ) {
+			external: ['swiper'],
+			output: {
+				entryFileNames: 'assets/js/[name].js',
+				chunkFileNames: 'assets/js/[name].js',
+				assetFileNames: ({ name }) => {
+					if (/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(name ?? '')) {
 						return 'assets/images/[name].[ext]';
 					}
-					if ( /\.css$/.test( name ?? '' ) ) {
+					if (/\.css$/.test(name ?? '')) {
 						return 'assets/css/[name].[ext]';
 					}
-					if ( /\.js$/.test( name ?? '' ) ) {
+					if (/\.js$/.test(name ?? '')) {
 						return 'assets/js/[name].[ext]';
 					}
 					return 'assets/[name].[ext]';
-        },
-      },
+				},
+				globals: {
+					swiper: 'Swiper'
+				},
+			},
 		},
 		assetsInlineLimit: 0,
 		minify: false,
