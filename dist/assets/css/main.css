@@ -3611,22 +3611,42 @@ canvas {
 .wp-block-post-template.wp-block-post-template .wp-block-post-excerpt {
   padding: 0 0.5rem;
 }
-.wp-block-post-template.wp-block-post-template img {
-  transition: all 0.5s;
+.wp-block-column.containsImg {
+  position: relative;
 }
-.wp-block-post-template.wp-block-post-template img:active {
-  transform: scale(1.05);
-  transition: all 0.5s;
-  filter: drop-shadow(10px 5px 5px rgba(0, 0, 0, 0.2));
+.wp-block-column.containsImg .wp-block-read-more {
+  display: none;
+  opacity: 0;
+}
+.wp-block-column.containsImg:active {
+  transform: scale(1.02);
+  transition: all 0.3s;
+  filter: drop-shadow(10px 5px 5px rgba(0, 0, 0, 0.2)) blur(1px);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-post-template.wp-block-post-template img:active {
+  .wp-block-column.containsImg:active {
     transform: unset;
     filter: unset;
   }
-  .wp-block-post-template.wp-block-post-template img:hover {
-    transform: scale(1.05);
+  .wp-block-column.containsImg .wp-block-read-more {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.2s;
+  }
+  .wp-block-column.containsImg:hover img {
+    transform: scale(1.02);
+    transition: all 0.3s;
+    filter: drop-shadow(10px 5px 5px rgba(0, 0, 0, 0.2)) blur(1px);
+  }
+  .wp-block-column.containsImg:hover .wp-block-read-more {
+    opacity: 1;
     transition: all 0.5s;
-    filter: drop-shadow(10px 5px 5px rgba(0, 0, 0, 0.2));
   }
 }

@@ -2,29 +2,36 @@
 @use "../../Foundation/variable" as v;
 
 .wp-block-media-text {
+
   display: flex;
 
-  .wp-block-media-text__content {
-    padding: 0;
-    width: 45vw;
+  .wp-block {
+    &-media {
+      &-text {
+        &__content {
+          padding: 0;
+          width: 45vw;
 
-    @include m.mq (screen012) {
-      width: 50%;
-    }
-  }
+          @include m.mq (screen012) {
+            width: 50%;
+          }
+        }
 
-  .wp-block-media-text__media {
-    height: 5rem;
-    width: 5rem;
-    margin: auto;
-    width: 45vw;
+        &__media {
+          height: 5rem;
+          width: 5rem;
+          margin: auto;
+          width: 45vw;
 
-    @include m.mq (screen012) {
-      width: 50%;
-    }
+          @include m.mq (screen012) {
+            width: 50%;
+          }
 
-    img {
-      padding: 0 2rem;
+          img {
+            padding: 0 2rem;
+          }
+        }
+      }
     }
   }
 }
@@ -128,33 +135,67 @@
       background-color: rgba($color: #000000, $alpha: 0.05);
     }
   }
+
   .wp-block-post-title {
     padding-bottom: 0.5rem;
+
     &:hover {
       background-color: rgba(0, 0, 0, 0.1);
       transform: scale(1.01);
       transition: all 0.5s;
     }
   }
+
   .wp-block-post-excerpt {
     padding: 0 0.5rem;
   }
-  img {
-    transition: all 0.5s;
-    &:active {
-      transform: scale(1.05);
-      transition: all 0.5s;
-      filter: drop-shadow(10px 5px 5px rgba($color: #000000, $alpha: 0.2));
+}
+
+.wp-block-column {
+  &.containsImg {
+    position: relative;
+
+    .wp-block-read-more {
+      display: none;
+      opacity: 0;
     }
+
+    &:active {
+      transform: scale(1.02);
+      transition: all 0.3s;
+      filter: drop-shadow(10px 5px 5px rgba($color: #000000, $alpha: 0.2)) blur(1px);
+    }
+
     @include m.mq (screen011) {
       &:active {
         transform: unset;
         filter: unset;
       }
+
+      .wp-block-read-more {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        padding: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: all 0.2s;
+      }
+
       &:hover {
-        transform: scale(1.05);
-        transition: all 0.5s;
-        filter: drop-shadow(10px 5px 5px rgba($color: #000000, $alpha: 0.2));
+        img {
+          transform: scale(1.02);
+          transition: all 0.3s;
+          filter: drop-shadow(10px 5px 5px rgba($color: #000000, $alpha: 0.2)) blur(1px);
+        }
+
+        .wp-block-read-more {
+          opacity: 1;
+          transition: all 0.5s;
+        }
       }
     }
   }
