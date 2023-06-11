@@ -95,6 +95,10 @@
     "file": "assets/images/publicdomainq-0011230agtryf-1.jpg",
     "src": "assets/images/publicdomainq-0011230agtryf-1.jpg"
   },
+  "assets/images/screenshotHamburger.png": {
+    "file": "assets/images/screenshotHamburger.png",
+    "src": "assets/images/screenshotHamburger.png"
+  },
   "assets/images/site-map_chunta.png": {
     "file": "assets/images/site-map_chunta.png",
     "src": "assets/images/site-map_chunta.png"
@@ -113,11 +117,11 @@
   },
   "assets/images/yama-base.jpg": {
     "file": "assets/images/yama-base.jpg",
-    "src": "assets/images/yama-base.jpg"
+    "src": "assets/images/yama-base@0.75x.jpg"
   },
   "assets/images/yama-base@0.75x.jpg": {
     "file": "assets/images/yama-base.jpg",
-    "src": "assets/images/yama-base.jpg"
+    "src": "assets/images/yama-base@0.75x.jpg"
   },
   "assets/images/yama-baseNew.jpg": {
     "file": "assets/images/yama-baseNew.jpg",

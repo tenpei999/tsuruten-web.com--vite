@@ -37,9 +37,6 @@
         <li class="layer-9 bg-lazy"></li>
         <li class="layer-10 bg-lazy"></li>
         <li class="layer-11 bg-lazy"></li>
-        <li class="layer-12">
-          <span class="bg-lazy"></span>
-        </li>
       </ul>
     </aside>
     <!-- animation-background -->
