@@ -246,7 +246,7 @@
               </li>
               <li class="cell__li">
                 <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/icons8-ワードプレス-96.png" alt="WordPress" class="icon">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/icons8-WP-96.png" alt="WordPress" class="icon">
                 </div>
                 <h5 class="title">
                   <p class="c-title--content">WordPress</p>
@@ -356,6 +356,27 @@
                       </h5>
                         <small>
                           制作期間:7日
+                        </small>              
+                    </div>
+                  </div>
+                </section>
+              </li>
+              <li class="swiper-slide">
+                <?php
+                $page = get_page_by_path('hamburger', OBJECT, 'product');
+                $permalink = get_permalink($page->ID);
+                ?>
+                <a href="<?php echo $permalink; ?>">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/screenshotHamburger" alt="アイキャッチ画像" class="img">
+                </a>
+                <section class="card">
+                  <div class="card-body">
+                    <div class="card-inner">
+                      <h5 class="card-title">
+                        <p>RaiseTech最終課題</p>
+                      </h5>
+                        <small>
+                          制作期間:6週間
                         </small>              
                     </div>
                   </div>
