@@ -1,7 +1,15 @@
 {
+  "assets/images/Javascript.jpg": {
+    "file": "assets/images/Javascript.jpg",
+    "src": "assets/images/Javascript.jpg"
+  },
   "assets/images/bird.png": {
     "file": "assets/images/bird.png",
     "src": "assets/images/bird.png"
+  },
+  "assets/images/children-g502ebf83d_1280.jpg": {
+    "file": "assets/images/children-g502ebf83d_1280.jpg",
+    "src": "assets/images/children-g502ebf83d_1280.jpg"
   },
   "assets/images/cloud-hide.png": {
     "file": "assets/images/cloud-hide.png",
@@ -23,6 +31,10 @@
     "file": "assets/images/cloud-single.png",
     "src": "assets/images/cloud-single.png"
   },
+  "assets/images/cms-g3dd2469c3_1280.jpg": {
+    "file": "assets/images/cms-g3dd2469c3_1280.jpg",
+    "src": "assets/images/cms-g3dd2469c3_1280.jpg"
+  },
   "assets/images/crow.png": {
     "file": "assets/images/crow.png",
     "src": "assets/images/crow.png"
@@ -30,6 +42,10 @@
   "assets/images/github-mark.png": {
     "file": "assets/images/github-mark.png",
     "src": "assets/images/github-mark.png"
+  },
+  "assets/images/html-g.png": {
+    "file": "assets/images/html-g.png",
+    "src": "assets/images/html-g.png"
   },
   "assets/images/icons8-adobe-64.png": {
     "file": "assets/images/icons8-adobe-64.png",
@@ -83,6 +99,10 @@
     "file": "assets/images/inoshishi_run3_negate.png",
     "src": "assets/images/inoshishi_run3_negate.png"
   },
+  "assets/images/interior-design-g70f9d930b_1280.jpg": {
+    "file": "assets/images/interior-design-g70f9d930b_1280.jpg",
+    "src": "assets/images/interior-design-g70f9d930b_1280.jpg"
+  },
   "assets/images/logojinuki.png": {
     "file": "assets/images/logojinuki.png",
     "src": "assets/images/logojinuki.png"
@@ -117,11 +137,11 @@
   },
   "assets/images/yama-base.jpg": {
     "file": "assets/images/yama-base.jpg",
-    "src": "assets/images/yama-base@0.75x.jpg"
+    "src": "assets/images/yama-base.jpg"
   },
   "assets/images/yama-base@0.75x.jpg": {
     "file": "assets/images/yama-base.jpg",
-    "src": "assets/images/yama-base@0.75x.jpg"
+    "src": "assets/images/yama-base.jpg"
   },
   "assets/images/yama-baseNew.jpg": {
     "file": "assets/images/yama-baseNew.jpg",
@@ -129,11 +149,11 @@
   },
   "assets/images/yama-front.png": {
     "file": "assets/images/yama-front.png",
-    "src": "assets/images/yama-front.png"
+    "src": "assets/images/yama-front@0.75x.png"
   },
   "assets/images/yama-front@0.75x.png": {
     "file": "assets/images/yama-front.png",
-    "src": "assets/images/yama-front.png"
+    "src": "assets/images/yama-front@0.75x.png"
   },
   "assets/images/yama-second.png": {
     "file": "assets/images/yama-second.png",
@@ -145,15 +165,15 @@
   },
   "assets/images/yama-third.png": {
     "file": "assets/images/yama-third.png",
-    "src": "assets/images/yama-third@0.75x.png"
+    "src": "assets/images/yama-third.png"
   },
   "assets/images/yama-third2.png": {
     "file": "assets/images/yama-third.png",
-    "src": "assets/images/yama-third@0.75x.png"
+    "src": "assets/images/yama-third.png"
   },
   "assets/images/yama-third@0.75x.png": {
     "file": "assets/images/yama-third.png",
-    "src": "assets/images/yama-third@0.75x.png"
+    "src": "assets/images/yama-third.png"
   },
   "main.css": {
     "file": "assets/css/main.css",

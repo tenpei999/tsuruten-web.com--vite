@@ -1,0 +1,35 @@
+@use "../../Foundation/index" as *;
+
+.c-check {
+  align-self: flex-start;
+  margin-right: 0.5rem;
+  position: relative;
+  padding: 5px 1rem 0 0;
+  width: 16px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+
+  &::before {
+    width: 16px;
+    height: 16px;
+    background: #2d8c45;
+    left: 0;
+  }
+
+  &::after {
+    border-bottom: 1.8px solid #ffffff;
+    border-left: 1.8px solid #ffffff;
+    height: 5px;
+    left: 4px;
+    top: 9px;
+    transform: rotate(-45deg);
+    width: 8px;
+  }
+}

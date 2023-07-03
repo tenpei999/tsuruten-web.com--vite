@@ -55,9 +55,9 @@
           <article class="p-intro__button-special">
             <div class="u-button-special soap_wrap">
               <a class="soap" href="<?php
-                $page = get_page_by_path('concept');
-                echo esc_url(get_permalink($page->ID));
-                ?>">Concept
+                                    $page = get_page_by_path('concept');
+                                    echo esc_url(get_permalink($page->ID));
+                                    ?>">Concept
               </a>
             </div>
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/crow.png" alt="好奇心旺盛なカラス" class="u-button-special__img">
@@ -183,125 +183,139 @@
         <h2 class="title" id="skill">
           <p class="c-title--section">スキル</p>
         </h2>
-        <section class="p-skill__site-building">
-          <p class="c-text--sentence">HTML&CSSを用いた静的コーディングからPHPによるWordPressのオリジナルテーマの作成までを行うことができます。</p>
-          <article class="p-skill__cell">
-            <h4 class="title">
-              <p class="c-title--sentence">スキルセット</p>
-            </h4>
-            <ul class="cell">
-              <li class="cell__li">
-                <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/icons8-html-5-96.png" alt="html" class="icon">
-                </div>
-                <h5 class="title">
-                  <p class="c-title--content">html</p>
-                </h5>
-                <div class="hour">
-                  <p class="hour__description">学習<br>時間</p>
-                  <p class="hour__length">320h</p>
-                </div>
-                <ul class="detail">
-                  <li class="li">.セマンティックhtml</li>
-                  <li class="li">.Bem記法によるクラスの命名</li>
-                </ul>
+        <h4 class="title__sub">
+          <p>静的コーディングからWordPressテーマ開発まで</p>
+        </h4>
+        <ul class="cell">
+          <li class="cell__li first">
+            <div class="img">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/html-g.png" alt="">
+            </div>
+            <h5 class="title">
+              <p class="c-title--content">HTMLマークアップ</p>
+            </h5>
+            <ul class="detail">
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  HTML Living Standard に準拠したセマンティックかつアクセシビリティに優れたマークアップ
+                </p>
               </li>
-              <li class="cell__li">
-                <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/icons8-css3-96.png" alt="css" class="icon">
-                </div>
-                <h5 class="title">
-                  <p class="c-title--content">css</p>
-                </h5>
-                <div class="hour">
-                  <p class="hour__description">学習<br>時間</p>
-                  <p class="hour__length">320h</p>
-                </div>
-                <ul class="detail">
-                  <li class="li">.Flocss</li>
-                  <li class="li">.SCSS</li>
-                  <li class="li">.CSSアニメーション</li>
-                </ul>
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  metaタグと&lt;h1&gt;〜&lt;h6&gt;タグの適切な利用によるブラウザフレンドリーなマークアップ
+                </p>
               </li>
-              <li class="cell__li">
-                <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/icons8-jquery-50.png" alt="jQuery" class="icon">
-                </div>
-                <h5 class="title">
-                  <p class="c-title--content">jQuery</p>
-                </h5>
-                <div class="hour">
-                  <p class="hour__description">学習<br>時間</p>
-                  <p class="hour__length">133.5h</p>
-                </div>
-                <ul class="detail">
-                  <li class="li">.アニメーションの作成</li>
-                  <li class="li">.ライブラリの使用</li>
-                  <li class="li">.javascriptへの書き換え</li>
-                  <li class="li">.簡単なjavascriptの使用</li>
-                </ul>
+              <li class="li">
+                <span class="c-check"></span>
+                セクショニングタグを適切に配置することによる文書の構造構築
               </li>
-              <li class="cell__li">
-                <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/icons8-WP-96.png" alt="WordPress" class="icon">
-                </div>
-                <h5 class="title">
-                  <p class="c-title--content">WordPress</p>
-                </h5>
-                <div class="hour">
-                  <p class="hour__description">学習<br>時間</p>
-                  <p class="hour__length">324.5h</p>
-                </div>
-                <ul class="detail">
-                  <li class="li">.複数ページの運用</li>
-                  <li class="li">.テンプレートタグによるコンテンツ読み込み</li>
-                  <li class="li">.プラグインの活用</li>
-                  <li class="li">.ブロックエディタによるカスタムhtmlの活用</li>
-                </ul>
-              </li>
-              <li class="cell__li">
-                <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/github-mark.png" alt="GitHub" class="icon">
-                </div>
-                <h5 class="title">
-                  <p class="c-title--content">git/GitHub</p>
-                </h5>
-                <div class="hour">
-                  <p class="hour__description">学習<br>時間</p>
-                  <p class="hour__length">40.75h</p>
-                </div>
-                <ul class="detail">
-                  <li class="li">.ブランチによるタスク管理</li>
-                  <li class="li">.Githubによるプロジェクト管理</li>
-                  <li class="li">.チーム開発の経験</li>
-                </ul>
-              </li>
-              <li class="cell__li">
-                <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/icons8-adobe-64.png" alt="adobe" class="icon">
-                </div>
-                <h5 class="title">
-                  <p class="c-title--content">AdobeCC</p>
-                </h5>
-                <div class="hour">
-                  <p class="hour__description">学習<br>時間</p>
-                  <p class="hour__length">208.5h</p>
-                </div>
-                <ul class="detail">
-                  <li class="li">.AdobeCC環境常備</li>
-                  <li class="li">.XDによるカンプ作成及び書き出し</li>
-                  <li class="li">.Photoshopによる簡単な画像加工</li>
-                  <li class="li">.illustratorによる簡単な画像加工</li>
-                  <li class="li">.figmaからのコーディング</li>
-                </ul>
-              </li>
-              
             </ul>
-            <!-- <a href="#" class="p-skill__link">
-              <p class="c-text--link">詳しくはこちら</p>
-            </a> -->
-          </article>
-        </section>
+          </li>
+          <li class="cell__li">
+            <div class="img">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/interior-design-g70f9d930b_1280.jpg" alt="css" class="icon">
+            </div>
+            <h5 class="title">
+              <p class="c-title--content">CSSスタイリング</p>
+            </h5>
+            <ul class="detail">
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  vw、calc、clamp等のモダンなCSSプロパティを活用したレスポンシブなコーディング
+                </p>
+              </li>
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  keyframesアニメーションを駆使することによる「目で見て楽しい」コーディング
+                </p>
+              </li>
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  保守しやすく、予測しやすく、拡張しやすく、再利用しやすいといった「よいCSS設計の目指す4つのゴール」を常に心がけることにより読みやすくかつ作業負担が少ないコーディング
+                </p>
+              </li>
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  CSS設計手法にFLOCSSとBEMを採用することによる安定したカスケーディング管理
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li class="cell__li">
+            <div class="img">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/Javascript.jpg" alt="JavaScript" class="icon">
+            </div>
+            <h5 class="title">
+              <p class="c-title--content">JavaScript</p>
+            </h5>
+            <ul class="detail">
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  jQuery非依存の独自アニメーション作成
+                </p>
+              </li>
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  JavaScriptライブラリの活用による高機能なアニメーションの実装
+                </p>
+              </li>
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  外部webサービスとのAPI連携
+                </p>
+              </li>
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  gulp、vite、postcss等フロントエンドツールの独自テンプレート作成
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li class="cell__li">
+            <div class="img">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/cms-WordPress.jpg" alt="WordPress" class="icon">
+            </div>
+            <h5 class="title">
+              <p class="c-title--content">WordPress</p>
+            </h5>
+            <ul class="detail">
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  オリジナルテーマの作成
+                </p>
+              </li>
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  WP_Query活用による投稿データの動的取得
+                </p>
+              </li>
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  カスタム投稿、カスタムフィールドによるCMS機能の高度なカスタマイズ
+                </p>
+              </li>
+              <li class="li">
+                <span class="c-check"></span>
+                <p>
+                  FTPソフトを介しサーバー上でwebサイトを管理運営し、404エラー等の急な不具合にも対応可能
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </section>
       <!-- p-skill -->
       <!-- Slider main container -->
@@ -332,7 +346,7 @@
                       </h5>
                       <small>
                         制作期間:7時間
-                      </small>   
+                      </small>
                     </div>
                   </div>
                 </section>
@@ -351,9 +365,9 @@
                       <h5 class="card-title">
                         <p>CSSアニメーション/gotenyama</p>
                       </h5>
-                        <small>
-                          制作期間:7日
-                        </small>              
+                      <small>
+                        制作期間:7日
+                      </small>
                     </div>
                   </div>
                 </section>
@@ -372,9 +386,9 @@
                       <h5 class="card-title">
                         <p>RaiseTech最終課題</p>
                       </h5>
-                        <small>
-                          制作期間:6週間
-                        </small>              
+                      <small>
+                        制作期間:6週間
+                      </small>
                     </div>
                   </div>
                 </section>
