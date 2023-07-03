@@ -298,7 +298,7 @@
               <li class="li">
                 <span class="c-check"></span>
                 <p>
-                  WP_Query活用による投稿データの動的取得
+                  クエリの活用による投稿データの動的取得
                 </p>
               </li>
               <li class="li">

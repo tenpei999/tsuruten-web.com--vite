@@ -273,8 +273,25 @@ if (document.body.classList.contains("l-body_is-front_page")) {
         }
       });
     });
+  }, callback = function(entries, observer2) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        opacityElement1.style.opacity = "0.5";
+        opacityElement1.style.transition = "all 0.2s";
+        opacityElement2.style.opacity = "0.5";
+        opacityElement2.style.transition = "all 0.2s";
+        opacityElement3.style.opacity = "0.5";
+        opacityElement3.style.transition = "all 0.2s";
+        console.log("要素が表示領域に入りました");
+      } else {
+        opacityElement1.style.opacity = "1";
+        opacityElement2.style.opacity = "1";
+        opacityElement3.style.opacity = "1";
+        console.log("要素が表示領域から出ました");
+      }
+    });
   };
-  var media2 = media, init2 = init;
+  var media2 = media, init2 = init, callback2 = callback;
   window.onload = function() {
     const spinner = document.getElementById("loading");
     spinner.classList.add("loaded");
@@ -308,39 +325,21 @@ if (document.body.classList.contains("l-body_is-front_page")) {
   mountainElements.forEach((mountainElement) => {
     mountainObserver.observe(mountainElement);
   });
+  const targetElement = document.querySelector(".p-contact");
+  const opacityElement1 = document.querySelector(".layer-9");
+  const opacityElement2 = document.querySelector(".layer-10");
+  const opacityElement3 = document.querySelector(".layer-11");
+  const options = {
+    root: document.querySelector(".l-main"),
+    // 親要素 'parent' をビューポートとする
+    rootMargin: "1000px",
+    // ビューポートの境界とのマージン
+    threshold: 0
+    // 0.0以上でコールバックを実行する
+  };
+  const observer = new IntersectionObserver(callback, options);
+  observer.observe(targetElement);
 }
-const targetElement = document.querySelector(".p-contact");
-const opacityElement1 = document.querySelector(".layer-9");
-const opacityElement2 = document.querySelector(".layer-10");
-const opacityElement3 = document.querySelector(".layer-11");
-const options = {
-  root: document.querySelector(".l-main"),
-  // 親要素 'parent' をビューポートとする
-  rootMargin: "1000px",
-  // ビューポートの境界とのマージン
-  threshold: 0
-  // 0.0以上でコールバックを実行する
-};
-const observer = new IntersectionObserver(callback, options);
-function callback(entries, observer2) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      opacityElement1.style.opacity = "0.5";
-      opacityElement1.style.transition = "all 0.2s";
-      opacityElement2.style.opacity = "0.5";
-      opacityElement2.style.transition = "all 0.2s";
-      opacityElement3.style.opacity = "0.5";
-      opacityElement3.style.transition = "all 0.2s";
-      console.log("要素が表示領域に入りました");
-    } else {
-      opacityElement1.style.opacity = "1";
-      opacityElement2.style.opacity = "1";
-      opacityElement3.style.opacity = "1";
-      console.log("要素が表示領域から出ました");
-    }
-  });
-}
-observer.observe(targetElement);
 if (document.body.classList.contains("l-body_is-concept_page")) {
   let init = function() {
     info.seconds = 0;

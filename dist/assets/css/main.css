@@ -2735,7 +2735,10 @@ canvas {
 .p-skill .title__sub {
   text-align: unset;
   letter-spacing: 1.5px;
-  padding: 2rem 0;
+  line-height: 1.75;
+  border-bottom: solid;
+  padding: 3rem 0 0.5rem 0;
+  margin-bottom: 3rem;
   font-size: 1.2rem;
   color: #fff;
   filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
@@ -2745,18 +2748,22 @@ canvas {
   flex-wrap: wrap;
 }
 .p-skill .cell__li {
-  padding-top: 1.5rem;
   width: 100%;
+  padding-top: 5rem;
+}
+.p-skill .cell__li.first {
+  padding-top: 2rem;
 }
 .p-skill .cell__li .title {
   text-align: center;
-  padding-top: unset;
+  padding: 2rem 0 1rem;
   color: #fff;
   filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .p-skill .cell__li .img img {
-  height: 75px;
-  width: 75px;
+  height: auto;
+  width: 100%;
+  aspect-ratio: 1.7/1;
   margin: auto;
 }
 .p-skill .cell__li .hour {
@@ -2776,7 +2783,7 @@ canvas {
   filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .p-skill .cell .detail {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #fff;
   padding-left: 0.5rem;
   filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
@@ -2785,7 +2792,8 @@ canvas {
   flex-direction: column;
 }
 .p-skill .cell .detail li {
-  padding: 0.2rem 0;
+  padding: 0.25rem 0;
+  display: flex;
 }
 .p-skill__link {
   display: block;
@@ -2907,6 +2915,40 @@ canvas {
   .c-card__btn {
     border-radius: 3rem;
   }
+}
+/* font-family */
+/* Color */
+/* font-weight */
+/* size */
+/* mixin */
+.c-check {
+  align-self: flex-start;
+  margin-right: 0.5rem;
+  position: relative;
+  padding: 5px 1rem 0 0;
+  width: 16px;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+.c-check:before, .c-check:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.c-check::before {
+  width: 16px;
+  height: 16px;
+  background: #2d8c45;
+  left: 0;
+}
+.c-check::after {
+  border-bottom: 1.8px solid #ffffff;
+  border-left: 1.8px solid #ffffff;
+  height: 5px;
+  left: 4px;
+  top: 9px;
+  transform: rotate(-45deg);
+  width: 8px;
 }
 /* ローディング画面 */
 #loading {
@@ -3203,13 +3245,16 @@ canvas {
 .c-title--section {
   font-family: "M PLUS 1", sans-serif;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-top: 1rem;
   color: #fff;
   filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .c-title--content {
   font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  line-height: 1.75;
+  font-weight: 600;
   color: #fff;
   filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
