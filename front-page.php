@@ -98,8 +98,8 @@
                   <div class="right"></div>
                 </div>
               </div>
-              <a href="#skill">
-                <p class="title">スキル</p>
+              <a href="#products">
+                <p class="title">制作物</p>
               </a>
             </li>
             <li class="item">
@@ -113,8 +113,8 @@
                   <div class="right"></div>
                 </div>
               </div>
-              <a href="#products">
-                <p class="title">制作物</p>
+              <a href="#skill">
+                <p class="title">スキル</p>
               </a>
             </li>
             <li class="item">
@@ -178,6 +178,124 @@
 
       </section>
       <!-- p-profile -->
+
+
+      <section class="p-products c-background-opacity">
+
+        <h2 class="title" id="products">
+          <p class="c-title--section c-margin-center">制作物</p>
+        </h2>
+        <article class="p-products__swiper">
+
+          <article class="swiper">
+            <!-- Additional required wrapper -->
+            <ul class="swiper-wrapper">
+              <!-- Slides -->
+              <li class="swiper-slide">
+                <?php
+                $page = get_page_by_path('chunta', OBJECT, 'product');
+                $page_id = $page->ID;
+                $permalink = get_permalink($page_id); 
+                ;?>
+                <a href="<?php echo $permalink; ?>">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/bird.png" alt="アイキャッチ画像" class="img">
+                </a>
+                <section class="card">
+                  <div class="card-body">
+                    <div class="card-inner">
+                      <h5 class="card-title">
+                        <?php echo get_the_title($page); ?>
+                      </h5>
+                      <p class="card-link">
+                        <a href="<?php echo $permalink; ?>">
+                          詳しく見る
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </li>
+              <li class="swiper-slide">
+                <?php
+                $page = get_page_by_path('gotenyama-no-huji-css-animation', OBJECT, 'product');
+                $page_id = $page->ID;
+                $permalink = get_permalink($page_id);
+                ?>
+                <a href="<?php echo $permalink; ?>">
+                  <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
+                </a>
+                <section class="card">
+                  <div class="card-body">
+                    <div class="card-inner">
+                      <h5 class="card-title">
+                        <?php echo get_the_title($page); ?>
+                      </h5>
+                      <p class="card-link">
+                        <a href="<?php echo $permalink; ?>">
+                          詳しく見る
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </li>
+              <li class="swiper-slide">
+                <?php
+                $page = get_page_by_path('hamburger', OBJECT, 'product');
+                $page_id = $page->ID;
+                $permalink = get_permalink($page_id);
+                ?>
+                <a href="<?php echo $permalink; ?>">
+                  <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
+                </a>
+                <section class="card">
+                  <div class="card-body">
+                    <div class="card-inner">
+                      <h5 class="card-title">
+                        <?php echo get_the_title($page); ?>
+                      </h5>
+                      <p class="card-link">
+                        <a href="<?php echo $permalink; ?>">
+                          詳しく見る
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </li>
+              <li class="swiper-slide">
+                <?php
+                $page = get_page_by_path('viteTemplate', OBJECT, 'product');
+                $page_id = $page->ID;
+                $permalink = get_permalink($page_id);
+                ?>
+                <a href="<?php echo $permalink; ?>">
+                  <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
+                </a>
+                <section class="card">
+                  <div class="card-body">
+                    <div class="card-inner">
+                      <h5 class="card-title">
+                        <?php echo get_the_title($page); ?>
+                      </h5>
+                      <p class="card-link">
+                        <a href="<?php echo $permalink; ?>">
+                          詳しく見る
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </li>
+            </ul>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            </div>
+          </article>
+        </article>
+      </section>
 
       <section class="c-background-opacity p-skill">
         <h2 class="title" id="skill">
@@ -320,88 +438,6 @@
       <!-- p-skill -->
       <!-- Slider main container -->
 
-      <section class="p-products c-background-opacity">
-
-        <h2 class="title" id="products">
-          <p class="c-title--section c-margin-center">制作物</p>
-        </h2>
-        <article class="p-products__swiper">
-
-          <article class="swiper">
-            <!-- Additional required wrapper -->
-            <ul class="swiper-wrapper">
-              <!-- Slides -->
-              <li class="swiper-slide">
-                <?php
-                $page = get_page_by_path('chunta', OBJECT, 'product');
-                $permalink = get_permalink($page->ID);; ?>
-                <a href="<?php echo $permalink; ?>">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/bird.png" alt="アイキャッチ画像" class="img">
-                </a>
-                <section class="card">
-                  <div class="card-body">
-                    <div class="card-inner">
-                      <h5 class="card-title">
-                        <p>CSSアニメーション/chunta</p>
-                      </h5>
-                      <small>
-                        制作期間:7時間
-                      </small>
-                    </div>
-                  </div>
-                </section>
-              </li>
-              <li class="swiper-slide">
-                <?php
-                $page = get_page_by_path('gotenyama-no-huji-css-animation', OBJECT, 'product');
-                $permalink = get_permalink($page->ID);
-                ?>
-                <a href="<?php echo $permalink; ?>">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/publicdomainq-0011230agtryf-1.jpg" alt="アイキャッチ画像" class="img">
-                </a>
-                <section class="card">
-                  <div class="card-body">
-                    <div class="card-inner">
-                      <h5 class="card-title">
-                        <p>CSSアニメーション/gotenyama</p>
-                      </h5>
-                      <small>
-                        制作期間:7日
-                      </small>
-                    </div>
-                  </div>
-                </section>
-              </li>
-              <li class="swiper-slide">
-                <?php
-                $page = get_page_by_path('hamburger', OBJECT, 'product');
-                $permalink = get_permalink($page->ID);
-                ?>
-                <a href="<?php echo $permalink; ?>">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/screenshotHamburger" alt="アイキャッチ画像" class="img">
-                </a>
-                <section class="card">
-                  <div class="card-body">
-                    <div class="card-inner">
-                      <h5 class="card-title">
-                        <p>RaiseTech最終課題</p>
-                      </h5>
-                      <small>
-                        制作期間:6週間
-                      </small>
-                    </div>
-                  </div>
-                </section>
-              </li>
-            </ul>
-
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- If we need navigation buttons -->
-            </div>
-          </article>
-        </article>
-      </section>
       <section class="p-contact">
         <h2 id="contact">
           <p class="c-title--section c-margin-center">お問い合わせ</p>

@@ -22,7 +22,7 @@
 
 .card {
   &-body {
-    height: 10rem;
+    height: auto;
   }
 
   &-inner {
@@ -33,7 +33,13 @@
   &-text {
     height: 7rem;
     width: 5rem;
+  }
 
+  &-link {
+    padding: 2rem 0 0;
+    margin-bottom: 2rem;
+    border-bottom: solid;
+    display: inline-block;
   }
 }
 
