@@ -117,13 +117,7 @@ if (document.body.classList.contains('l-body_is-front_page')) {
         const win3Start = 250 + elmOffsetY;
         const offsetMove = winStart - winHeight * 0.3333;                             // 'layer-2'のmargin-top を求める条件式
         const offset2Move = win2Start - winHeight * 0.15;                             // 'layer-2'のmargin-top を求める条件式
-        const offset3Move = win3Start - winHeight * 0.1;                             // 'layer-2'のmargin-top を求める条件式
-
-        // console.log(winHeight);
-        // console.log(winMath);
-        // console.log(elmOffsetY);
-        // console.log(offsetMove);     
-        // console.log("hoge");       
+        const offset3Move = win3Start - winHeight * 0.1;                             // 'layer-2'のmargin-top を求める条件式   
 
         if (winHeight < 2000) {
           [layer2, layer22, layer23].forEach(ele => ele.classList.add('up'));
@@ -160,22 +154,6 @@ if (document.body.classList.contains('l-body_is-front_page')) {
   })
 }
 
-
-// 'scroll load'.split(' ').forEach((cloudFade) => {
-//   window.addEventListener(cloudFade, () => {
-
-//     const inner = document.querySelector('.l-main');
-//     const innerScroll = inner.scrollTop;  
-//     const winHeight = window.pageYOffset;   
-//     // console.log(winHeight);
-//     // console.log(winMath);
-//     // console.log(elmOffsetY);
-//     // console.log(offsetMove);     
-//     // console.log("hoge");   
-
-//     console.log(innerScroll);
-//   })
-// })
 // 監視対象の要素を取得
 const targetElement = document.querySelector('.p-contact');
 const opacityElement1 = document.querySelector('.layer-9');
