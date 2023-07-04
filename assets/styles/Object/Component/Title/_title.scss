@@ -44,4 +44,11 @@
       border-bottom: solid 1px;
     }
   }
+
+  &--logo {
+    font-size: 2rem;
+    font-family: v.$TitleFont;
+    font-weight: v.$SansBlack;
+    letter-spacing: -0.5px;
+  }
 }

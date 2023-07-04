@@ -43,25 +43,28 @@
 
     <main class="l-main">
 
-      <article class="c-space-narrow">
+      <div class="c-space-narrow">
         <section class="c-background-opacity p-intro">
 
           <h1 class="p-intro__logo">
-            <div>
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/tsuruten_logo20230124-2.png" alt="tsuruten-web.com" class="c-margin-center">
-            </div>
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/logojinuki.png" alt="tsuruten-web.com" class="c-margin-center">
+            <p class="c-margin-center c-title--logo">
+              TSURUTEN
+            </p>
           </h1>
 
-          <article class="p-intro__button-special">
-            <div class="u-button-special soap_wrap">
+          <figure class="p-intro__button-special">
+            <h2 class="u-button-special soap_wrap">
               <a class="soap" href="<?php
                                     $page = get_page_by_path('concept');
                                     echo esc_url(get_permalink($page->ID));
                                     ?>">Concept
               </a>
-            </div>
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/crow.png" alt="好奇心旺盛なカラス" class="u-button-special__img">
-          </article>
+            </h2>
+            <figcaption>
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/crow.png" alt="好奇心旺盛なカラス" class="u-button-special__img">
+            </figcaption>
+          </figure>
           <!-- button-group -->
 
         </section>
@@ -150,7 +153,7 @@
           </ul>
         </article>
 
-      </article>
+      </div>
       <section class="js-fadeUp p-profile c-background-opacity">
 
         <h2 class="title" id="profile">
@@ -195,8 +198,7 @@
                 <?php
                 $page = get_page_by_path('chunta', OBJECT, 'product');
                 $page_id = $page->ID;
-                $permalink = get_permalink($page_id); 
-                ;?>
+                $permalink = get_permalink($page_id);; ?>
                 <a href="<?php echo $permalink; ?>">
                   <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/bird.png" alt="アイキャッチ画像" class="img">
                 </a>
