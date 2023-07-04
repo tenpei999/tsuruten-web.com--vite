@@ -1,6 +1,6 @@
-if (document.body.classList.contains('l-body_is-front_page')) {
-  const swiper = new Swiper('.swiper', {
 
+export const swiperFront = () => {
+  const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -30,12 +30,11 @@ if (document.body.classList.contains('l-body_is-front_page')) {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-
   });
 }
 
-if (document.body.classList.contains('l-body_is-concept_page')) {
 
+export const swiperSetConcept = () => {
   const swiperConcept = new Swiper('.swiper-concept', {
 
     direction: 'vertical',
@@ -59,10 +58,6 @@ if (document.body.classList.contains('l-body_is-concept_page')) {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
 
     on: {
       // 切り替わりのアニメーションが終了したとき
@@ -72,7 +67,6 @@ if (document.body.classList.contains('l-body_is-concept_page')) {
           swipe_actionText();
       }
     }
-
   });
 
   //アニメーション 初期化
@@ -181,3 +175,5 @@ if (document.body.classList.contains('l-body_is-concept_page')) {
     }
   }
 }
+
+

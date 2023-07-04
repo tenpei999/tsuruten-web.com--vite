@@ -1,0 +1,53 @@
+@use "../../Foundation/mixin" as m;
+
+.js-fadeUp {
+  opacity: 0;
+
+  &.js-observer {
+    @include m.animation(frontAnimationOpacity, $duration: 0.5s, $delay: 0s);
+  }
+
+  &__card2 {
+    opacity: 0;
+
+    &.js-observer {
+      @include m.animation(frontAnimationOpacity, $duration: 0.5s, $delay: 0s);
+    }
+  }
+
+  &__card3 {
+    opacity: 0;
+
+    &.js-observer {
+      @include m.animation(frontAnimationOpacity, $duration: 0.5s, $delay: 0s);
+    }
+  }
+
+  &__card4 {
+    opacity: 0;
+
+    &.js-observer {
+      @include m.animation(frontAnimationOpacity, $duration: 0.5s, $delay: 0s);
+    }
+  }
+
+  &__card5 {
+    opacity: 0;
+
+    &.js-observer {
+      @include m.animation(frontAnimationOpacity, $duration: 0.5s, $delay: 0s);
+    }
+  }
+}
+
+@keyframes frontAnimationOpacity {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}

@@ -67,7 +67,7 @@
         </section>
         <!-- p-intro -->
 
-        <article class="p-gmenu--table">
+        <article class="js-fadeUp p-gmenu--table">
           <button class="p-gmenu__button">
             <p class="c-title--button p-gmenu__button--title">もくじ</p>
           </button>
@@ -151,7 +151,7 @@
         </article>
 
       </article>
-      <section class="p-profile c-background-opacity">
+      <section class="js-fadeUp p-profile c-background-opacity">
 
         <h2 class="title" id="profile">
           <p class="c-title--section c-margin-center">
@@ -182,10 +182,10 @@
 
       <section class="p-products c-background-opacity">
 
-        <h2 class="title" id="products">
+        <h2 class="js-fadeUp title" id="products">
           <p class="c-title--section c-margin-center">制作物</p>
         </h2>
-        <article class="p-products__swiper">
+        <article class="js-fadeUp p-products__swiper">
 
           <article class="swiper">
             <!-- Additional required wrapper -->
@@ -298,66 +298,66 @@
       </section>
 
       <section class="c-background-opacity p-skill">
-        <h2 class="title" id="skill">
+        <h2 class="js-fadeUp title" id="skill">
           <p class="c-title--section">スキル</p>
         </h2>
-        <h4 class="title__sub">
+        <h4 class="js-fadeUp title__sub">
           <p>静的コーディングからWordPressテーマ開発まで</p>
         </h4>
         <ul class="cell">
           <li class="cell__li first">
-            <div class="img">
+            <div class="js-fadeUp img">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/html-g.png" alt="">
             </div>
-            <h5 class="title">
+            <h5 class="js-fadeUp title">
               <p class="c-title--content">HTMLマークアップ</p>
             </h5>
-            <ul class="detail">
-              <li class="li">
+            <ul class="js-fadeUp detail">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   HTML Living Standard に準拠したセマンティックかつアクセシビリティに優れたマークアップ
                 </p>
               </li>
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   metaタグと&lt;h1&gt;〜&lt;h6&gt;タグの適切な利用によるブラウザフレンドリーなマークアップ
                 </p>
               </li>
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 セクショニングタグを適切に配置することによる文書の構造構築
               </li>
             </ul>
           </li>
           <li class="cell__li">
-            <div class="img">
+            <div class="js-fadeUp img">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/interior-design-g70f9d930b_1280.jpg" alt="css" class="icon">
             </div>
-            <h5 class="title">
+            <h5 class="js-fadeUp title">
               <p class="c-title--content">CSSスタイリング</p>
             </h5>
             <ul class="detail">
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   vw、calc、clamp等のモダンなCSSプロパティを活用したレスポンシブなコーディング
                 </p>
               </li>
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   keyframesアニメーションを駆使することによる「目で見て楽しい」コーディング
                 </p>
               </li>
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   保守しやすく、予測しやすく、拡張しやすく、再利用しやすいといった「よいCSS設計の目指す4つのゴール」を常に心がけることにより読みやすくかつ作業負担が少ないコーディング
                 </p>
               </li>
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   CSS設計手法にFLOCSSとBEMを採用することによる安定したカスケーディング管理
@@ -366,32 +366,32 @@
             </ul>
           </li>
           <li class="cell__li">
-            <div class="img">
+            <div class="js-fadeUp img">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/Javascript.jpg" alt="JavaScript" class="icon">
             </div>
-            <h5 class="title">
+            <h5 class="js-fadeUp title">
               <p class="c-title--content">JavaScript</p>
             </h5>
             <ul class="detail">
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   jQuery非依存の独自アニメーション作成
                 </p>
               </li>
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   JavaScriptライブラリの活用による高機能なアニメーションの実装
                 </p>
               </li>
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   外部webサービスとのAPI連携
                 </p>
               </li>
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   gulp、vite、postcss等フロントエンドツールの独自テンプレート作成
@@ -400,32 +400,32 @@
             </ul>
           </li>
           <li class="cell__li">
-            <div class="img">
+            <div class="js-fadeUp img">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/cms-WordPress.jpg" alt="WordPress" class="icon">
             </div>
-            <h5 class="title">
+            <h5 class="js-fadeUp title">
               <p class="c-title--content">WordPress</p>
             </h5>
             <ul class="detail">
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   オリジナルテーマの作成
                 </p>
               </li>
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   クエリの活用による投稿データの動的取得
                 </p>
               </li>
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   カスタム投稿、カスタムフィールドによるCMS機能の高度なカスタマイズ
                 </p>
               </li>
-              <li class="li">
+              <li class="js-fadeUp li">
                 <span class="c-check"></span>
                 <p>
                   FTPソフトを介しサーバー上でwebサイトを管理運営し、404エラー等の急な不具合にも対応可能
@@ -439,10 +439,10 @@
       <!-- Slider main container -->
 
       <section class="p-contact">
-        <h2 id="contact">
+        <h2 id="js-fadeUp contact">
           <p class="c-title--section c-margin-center">お問い合わせ</p>
         </h2>
-        <article class="p-contact__form">
+        <article class="js-fadeUp p-contact__form">
           <?php echo apply_shortcodes('[contact-form-7 id="3515" title="お問合せフォーム"]'); ?>
         </article>
       </section>
