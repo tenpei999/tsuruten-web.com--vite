@@ -188,254 +188,245 @@
         <h2 class="js-fadeUp title" id="products">
           <p class="c-title--section c-margin-center">制作物</p>
         </h2>
-        <article class="js-fadeUp p-products__swiper">
+        <div class="p-products__swiper">
 
-          <article class="swiper">
+          <article class="js-fadeUp swiper">
             <!-- Additional required wrapper -->
-            <ul class="swiper-wrapper">
+            <div class="swiper-wrapper">
               <!-- Slides -->
-              <li class="swiper-slide">
+              <figure class="swiper-slide">
                 <?php
                 $page = get_page_by_path('chunta', OBJECT, 'product');
                 $page_id = $page->ID;
                 $permalink = get_permalink($page_id);; ?>
-                <a href="<?php echo $permalink; ?>">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/bird.png" alt="アイキャッチ画像" class="img">
-                </a>
-                <section class="card">
-                  <div class="card-body">
-                    <div class="card-inner">
-                      <h5 class="card-title">
-                        <?php echo get_the_title($page); ?>
-                      </h5>
-                      <p class="card-link">
-                        <a href="<?php echo $permalink; ?>">
-                          詳しく見る
-                        </a>
-                      </p>
-                    </div>
-                  </div>
+                <figcaption>
+                  <a href="<?php echo $permalink; ?>">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/bird.png" alt="アイキャッチ画像" class="img">
+                  </a>
+                </figcaption>
+                <section class="card-inner">
+                  <h5 class="card-title">
+                    <?php echo get_the_title($page); ?>
+                  </h5>
+                  <p class="card-link">
+                    <a href="<?php echo $permalink; ?>">
+                      詳しく見る
+                    </a>
+                  </p>
                 </section>
-              </li>
-              <li class="swiper-slide">
+              </figure>
+              <figure class="swiper-slide">
                 <?php
                 $page = get_page_by_path('gotenyama-no-huji-css-animation', OBJECT, 'product');
                 $page_id = $page->ID;
                 $permalink = get_permalink($page_id);
                 ?>
-                <a href="<?php echo $permalink; ?>">
-                  <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
-                </a>
-                <section class="card">
-                  <div class="card-body">
-                    <div class="card-inner">
-                      <h5 class="card-title">
-                        <?php echo get_the_title($page); ?>
-                      </h5>
-                      <p class="card-link">
-                        <a href="<?php echo $permalink; ?>">
-                          詳しく見る
-                        </a>
-                      </p>
-                    </div>
-                  </div>
+                <figcaption>
+                  <a href="<?php echo $permalink; ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
+                  </a>
+                </figcaption>
+                <section class="card-inner">
+                  <h5 class="card-title">
+                    <?php echo get_the_title($page); ?>
+                  </h5>
+                  <p class="card-link">
+                    <a href="<?php echo $permalink; ?>">
+                      詳しく見る
+                    </a>
+                  </p>
                 </section>
-              </li>
-              <li class="swiper-slide">
+              </figure>
+              <figure class="swiper-slide">
                 <?php
                 $page = get_page_by_path('hamburger', OBJECT, 'product');
                 $page_id = $page->ID;
                 $permalink = get_permalink($page_id);
                 ?>
-                <a href="<?php echo $permalink; ?>">
-                  <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
-                </a>
-                <section class="card">
-                  <div class="card-body">
-                    <div class="card-inner">
-                      <h5 class="card-title">
-                        <?php echo get_the_title($page); ?>
-                      </h5>
-                      <p class="card-link">
-                        <a href="<?php echo $permalink; ?>">
-                          詳しく見る
-                        </a>
-                      </p>
-                    </div>
-                  </div>
+                <figcaption>
+                  <a href="<?php echo $permalink; ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
+                  </a>
+                </figcaption>
+                <section class="card-inner">
+                  <h5 class="card-title">
+                    <?php echo get_the_title($page); ?>
+                  </h5>
+                  <p class="card-link">
+                    <a href="<?php echo $permalink; ?>">
+                      詳しく見る
+                    </a>
+                  </p>
                 </section>
-              </li>
-              <li class="swiper-slide">
+              </figure>
+              <figure class="swiper-slide">
                 <?php
                 $page = get_page_by_path('viteTemplate', OBJECT, 'product');
                 $page_id = $page->ID;
                 $permalink = get_permalink($page_id);
                 ?>
-                <a href="<?php echo $permalink; ?>">
-                  <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
-                </a>
-                <section class="card">
-                  <div class="card-body">
-                    <div class="card-inner">
-                      <h5 class="card-title">
-                        <?php echo get_the_title($page); ?>
-                      </h5>
-                      <p class="card-link">
-                        <a href="<?php echo $permalink; ?>">
-                          詳しく見る
-                        </a>
-                      </p>
-                    </div>
-                  </div>
+                <figcaption>
+                  <a href="<?php echo $permalink; ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
+                  </a>
+                </figcaption>
+                <section class="card-inner">
+                  <h5 class="card-title">
+                    <?php echo get_the_title($page); ?>
+                  </h5>
+                  <p class="card-link">
+                    <a href="<?php echo $permalink; ?>">
+                      詳しく見る
+                    </a>
+                  </p>
                 </section>
-              </li>
-            </ul>
+              </figure>
+            </div>
 
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
             <!-- If we need navigation buttons -->
-            </div>
-          </article>
+        </div>
         </article>
+        </div>
       </section>
 
       <section class="c-background-opacity p-skill">
         <h2 class="js-fadeUp title" id="skill">
           <p class="c-title--section">スキル</p>
         </h2>
-        <h4 class="js-fadeUp title__sub">
+        <h3 class="js-fadeUp title__sub">
           <p>静的コーディングからWordPressテーマ開発まで</p>
-        </h4>
-        <ul class="cell">
-          <li class="cell__li first">
-            <div class="js-fadeUp img">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/html-g.png" alt="">
-            </div>
-            <h5 class="js-fadeUp title">
-              <p class="c-title--content">HTMLマークアップ</p>
-            </h5>
-            <ul class="js-fadeUp detail">
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  HTML Living Standard に準拠したセマンティックかつアクセシビリティに優れたマークアップ
-                </p>
-              </li>
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  metaタグと&lt;h1&gt;〜&lt;h6&gt;タグの適切な利用によるブラウザフレンドリーなマークアップ
-                </p>
-              </li>
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                セクショニングタグを適切に配置することによる文書の構造構築
-              </li>
-            </ul>
-          </li>
-          <li class="cell__li">
-            <div class="js-fadeUp img">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/interior-design-g70f9d930b_1280.jpg" alt="css" class="icon">
-            </div>
-            <h5 class="js-fadeUp title">
-              <p class="c-title--content">CSSスタイリング</p>
-            </h5>
-            <ul class="detail">
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  vw、calc、clamp等のモダンなCSSプロパティを活用したレスポンシブなコーディング
-                </p>
-              </li>
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  keyframesアニメーションを駆使することによる「目で見て楽しい」コーディング
-                </p>
-              </li>
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  保守しやすく、予測しやすく、拡張しやすく、再利用しやすいといった「よいCSS設計の目指す4つのゴール」を常に心がけることにより読みやすくかつ作業負担が少ないコーディング
-                </p>
-              </li>
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  CSS設計手法にFLOCSSとBEMを採用することによる安定したカスケーディング管理
-                </p>
-              </li>
-            </ul>
-          </li>
-          <li class="cell__li">
-            <div class="js-fadeUp img">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/Javascript.jpg" alt="JavaScript" class="icon">
-            </div>
-            <h5 class="js-fadeUp title">
-              <p class="c-title--content">JavaScript</p>
-            </h5>
-            <ul class="detail">
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  jQuery非依存の独自アニメーション作成
-                </p>
-              </li>
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  JavaScriptライブラリの活用による高機能なアニメーションの実装
-                </p>
-              </li>
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  外部webサービスとのAPI連携
-                </p>
-              </li>
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  gulp、vite、postcss等フロントエンドツールの独自テンプレート作成
-                </p>
-              </li>
-            </ul>
-          </li>
-          <li class="cell__li">
-            <div class="js-fadeUp img">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/cms-WordPress.jpg" alt="WordPress" class="icon">
-            </div>
-            <h5 class="js-fadeUp title">
-              <p class="c-title--content">WordPress</p>
-            </h5>
-            <ul class="detail">
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  オリジナルテーマの作成
-                </p>
-              </li>
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  クエリの活用による投稿データの動的取得
-                </p>
-              </li>
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  カスタム投稿、カスタムフィールドによるCMS機能の高度なカスタマイズ
-                </p>
-              </li>
-              <li class="js-fadeUp li">
-                <span class="c-check"></span>
-                <p>
-                  FTPソフトを介しサーバー上でwebサイトを管理運営し、404エラー等の急な不具合にも対応可能
-                </p>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        </h3>
+        <section class="cell__li first">
+          <div class="js-fadeUp img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/html-g.png" alt="">
+          </div>
+          <h4 class="js-fadeUp title">
+            <p class="c-title--content">HTMLマークアップ</p>
+          </h4>
+          <ul class="js-fadeUp detail">
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                HTML Living Standard に準拠したセマンティックかつアクセシビリティに優れたマークアップ
+              </p>
+            </li>
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                metaタグと&lt;h1&gt;〜&lt;h6&gt;タグの適切な利用によるブラウザフレンドリーなマークアップ
+              </p>
+            </li>
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              セクショニングタグを適切に配置することによる文書の構造構築
+            </li>
+          </ul>
+        </section>
+        <section class="cell__li">
+          <div class="js-fadeUp img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/interior-design-g70f9d930b_1280.jpg" alt="css" class="icon">
+          </div>
+          <h4 class="js-fadeUp title">
+            <p class="c-title--content">CSSスタイリング</p>
+          </h4>
+          <ul class="detail">
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                vw、calc、clamp等のモダンなCSSプロパティを活用したレスポンシブなコーディング
+              </p>
+            </li>
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                keyframesアニメーションを駆使することによる「目で見て楽しい」コーディング
+              </p>
+            </li>
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                保守しやすく、予測しやすく、拡張しやすく、再利用しやすいといった「よいCSS設計の目指す4つのゴール」を常に心がけることにより読みやすくかつ作業負担が少ないコーディング
+              </p>
+            </li>
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                CSS設計手法にFLOCSSとBEMを採用することによる安定したカスケーディング管理
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section class="cell__li">
+          <div class="js-fadeUp img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/Javascript.jpg" alt="JavaScript" class="icon">
+          </div>
+          <h4 class="js-fadeUp title">
+            <p class="c-title--content">JavaScript</p>
+          </h4>
+          <ul class="detail">
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                jQuery非依存の独自アニメーション作成
+              </p>
+            </li>
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                JavaScriptライブラリの活用による高機能なアニメーションの実装
+              </p>
+            </li>
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                外部webサービスとのAPI連携
+              </p>
+            </li>
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                gulp、vite、postcss等フロントエンドツールの独自テンプレート作成
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section class="cell__li">
+          <div class="js-fadeUp img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/cms-WordPress.jpg" alt="WordPress" class="icon">
+          </div>
+          <h4 class="js-fadeUp title">
+            <p class="c-title--content">WordPress</p>
+          </h4>
+          <ul class="detail">
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                オリジナルテーマの作成
+              </p>
+            </li>
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                クエリの活用による投稿データの動的取得
+              </p>
+            </li>
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                カスタム投稿、カスタムフィールドによるCMS機能の高度なカスタマイズ
+              </p>
+            </li>
+            <li class="js-fadeUp li">
+              <span class="c-check"></span>
+              <p>
+                FTPソフトを介しサーバー上でwebサイトを管理運営し、404エラー等の急な不具合にも対応可能
+              </p>
+            </li>
+          </ul>
+        </section>
+
       </section>
       <!-- p-skill -->
       <!-- Slider main container -->
