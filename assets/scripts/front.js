@@ -153,44 +153,37 @@ if (document.body.classList.contains('l-body_is-front_page')) {
     mountainObserver.observe(mountainElement)
   })
   
-  // 監視対象の要素を取得
-  const targetElement = document.querySelector('.p-contact');
-  const opacityElement1 = document.querySelector('.layer-9');
-  const opacityElement2 = document.querySelector('.layer-10');
-  const opacityElement3 = document.querySelector('.layer-11');
-  
-  // Intersection Observerの設定
-  const options = {
-    root: document.querySelector('.l-main'), // 親要素 'parent' をビューポートとする
-    rootMargin: '1000px', // ビューポートの境界とのマージン
-    threshold: 0 // 0.0以上でコールバックを実行する
-  };
-  
-  // Intersection Observerの作成
-  const observer = new IntersectionObserver(callback, options);
-  
-  // コールバック関数
-  function callback(entries, observer) {
-    entries.forEach(entry => {
+ // 監視対象の要素を取得
+const targetElement = document.querySelector('.p-contact');
+const opacityElements = Array.from({length: 7}, (_, i) => 
+    document.querySelector(`.layer-${[9, 10, 11, 1, 2, 4, 5][i]}`));
+
+// Intersection Observerの設定
+const options = {
+  root: document.querySelector('.l-main'), 
+  rootMargin: '2500px', 
+  threshold: 0 
+};
+
+// Intersection Observerの作成
+const observer = new IntersectionObserver(callback, options);
+
+// コールバック関数
+function callback(entries, observer) {
+  entries.forEach(entry => {
+    opacityElements.forEach((element, index) => {
       if (entry.isIntersecting) {
-        // 要素が表示領域に入った場合の処理
-        opacityElement1.style.opacity = '0.5';
-        opacityElement1.style.transition = 'all 0.2s';
-        opacityElement2.style.opacity = '0.5';
-        opacityElement2.style.transition = 'all 0.2s';
-        opacityElement3.style.opacity = '0.5';
-        opacityElement3.style.transition = 'all 0.2s';
-        console.log('要素が表示領域に入りました');
+        element.style.opacity = index === 6 ? '0' : '0.5'; 
+        element.style.transition = 'all 0.2s';
+        if (index === 6) element.style.animation = 'none';
       } else {
-        // 要素が表示領域から出た場合の処理
-        opacityElement1.style.opacity = '1';
-        opacityElement2.style.opacity = '1';
-        opacityElement3.style.opacity = '1';
-        console.log('要素が表示領域から出ました');
+        element.style.opacity = '1'; 
       }
     });
-  }
-  
-  // 監視を開始
-  observer.observe(targetElement);
+  });
+}
+
+// 監視を開始
+observer.observe(targetElement);
+
 }
