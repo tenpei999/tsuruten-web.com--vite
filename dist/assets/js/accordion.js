@@ -1,0 +1,13 @@
+const accordion = () => {
+  const accordionButton = document.querySelector(".p-gmenu__button");
+  const table = document.querySelector(".p-gmenu--table");
+  const list = document.querySelector(".p-gmenu__list.in-table");
+  accordionButton.addEventListener("click", () => {
+    accordionButton.classList.toggle("active");
+    table.classList.toggle("c-background--opacity");
+    list.classList.toggle("active");
+  });
+};
+export {
+  accordion
+};

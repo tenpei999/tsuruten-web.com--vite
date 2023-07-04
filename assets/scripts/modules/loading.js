@@ -1,8 +1,16 @@
-
 export const loading = () => {
-  window.onload = function () {
+
+  function addLoadedClass() {
     const spinner = document.getElementById('loading');
-    spinner.classList.add('loaded');
+
+    if (spinner) {
+      spinner.classList.add('loaded');
+    }
+  }
+
+  if (document.readyState === 'loading') {  // Loading hasn't finished yet
+    window.addEventListener('DOMContentLoaded', addLoadedClass);
+  } else {  // `DOMContentLoaded` has already fired
+    addLoadedClass();
   }
 };
-

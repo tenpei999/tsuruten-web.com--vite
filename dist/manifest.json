@@ -149,11 +149,11 @@
   },
   "assets/images/yama-front.png": {
     "file": "assets/images/yama-front.png",
-    "src": "assets/images/yama-front@0.75x.png"
+    "src": "assets/images/yama-front.png"
   },
   "assets/images/yama-front@0.75x.png": {
     "file": "assets/images/yama-front.png",
-    "src": "assets/images/yama-front@0.75x.png"
+    "src": "assets/images/yama-front.png"
   },
   "assets/images/yama-second.png": {
     "file": "assets/images/yama-second.png",
@@ -175,6 +175,46 @@
     "file": "assets/images/yama-third.png",
     "src": "assets/images/yama-third@0.75x.png"
   },
+  "assets/scripts/modules/accordion.js": {
+    "file": "assets/js/accordion.js",
+    "isDynamicEntry": true,
+    "src": "assets/scripts/modules/accordion.js"
+  },
+  "assets/scripts/modules/backgroundMove.js": {
+    "file": "assets/js/backgroundMove.js",
+    "isDynamicEntry": true,
+    "src": "assets/scripts/modules/backgroundMove.js"
+  },
+  "assets/scripts/modules/drawWave.js": {
+    "file": "assets/js/drawWave.js",
+    "isDynamicEntry": true,
+    "src": "assets/scripts/modules/drawWave.js"
+  },
+  "assets/scripts/modules/loading.js": {
+    "file": "assets/js/loading.js",
+    "isDynamicEntry": true,
+    "src": "assets/scripts/modules/loading.js"
+  },
+  "assets/scripts/modules/modalButton.js": {
+    "file": "assets/js/modalButton.js",
+    "isDynamicEntry": true,
+    "src": "assets/scripts/modules/modalButton.js"
+  },
+  "assets/scripts/modules/observer.js": {
+    "file": "assets/js/observer.js",
+    "isDynamicEntry": true,
+    "src": "assets/scripts/modules/observer.js"
+  },
+  "assets/scripts/modules/pagetopGif.js": {
+    "file": "assets/js/pagetopGif.js",
+    "isDynamicEntry": true,
+    "src": "assets/scripts/modules/pagetopGif.js"
+  },
+  "assets/scripts/modules/slider.js": {
+    "file": "assets/js/slider.js",
+    "isDynamicEntry": true,
+    "src": "assets/scripts/modules/slider.js"
+  },
   "main.css": {
     "file": "assets/css/main.css",
     "src": "main.css"
@@ -182,6 +222,20 @@
   "main.js": {
     "css": [
       "assets/css/main.css"
+    ],
+    "dynamicImports": [
+      "assets/scripts/modules/pagetopGif.js",
+      "assets/scripts/modules/loading.js",
+      "assets/scripts/modules/backgroundMove.js",
+      "assets/scripts/modules/observer.js",
+      "assets/scripts/modules/backgroundMove.js",
+      "assets/scripts/modules/backgroundMove.js",
+      "assets/scripts/modules/slider.js",
+      "assets/scripts/modules/accordion.js",
+      "assets/scripts/modules/modalButton.js",
+      "assets/scripts/modules/loading.js",
+      "assets/scripts/modules/drawWave.js",
+      "assets/scripts/modules/slider.js"
     ],
     "file": "assets/js/main.js",
     "isEntry": true,

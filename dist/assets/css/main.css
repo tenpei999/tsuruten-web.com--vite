@@ -1043,7 +1043,6 @@ button.swiper-pagination-bullet {
   width: 2100px;
   scale: 1.5 1.18;
   z-index: 300;
-  opacity: blur(2px) brightness(100%);
   filter: blur(2px) brightness(100%);
   animation: gradually 24s ease-in-out infinite;
 }
@@ -2532,8 +2531,8 @@ canvas {
 }
 .p-products__swiper .swiper .img {
   display: block;
-  width: 80%;
-  margin: auto;
+  width: 90%;
+  margin: 0.5rem auto 0 auto;
   aspect-ratio: 4/3;
   background: rgba(255, 255, 255, 0.7) 0%/cover;
 }
@@ -2950,6 +2949,77 @@ canvas {
   transform: rotate(-45deg);
   width: 8px;
 }
+/* mixin */
+.js-fadeUp {
+  opacity: 0;
+}
+.js-fadeUp.js-observer {
+  animation-name: frontAnimationOpacity;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+.js-fadeUp__card2 {
+  opacity: 0;
+}
+.js-fadeUp__card2.js-observer {
+  animation-name: frontAnimationOpacity;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+.js-fadeUp__card3 {
+  opacity: 0;
+}
+.js-fadeUp__card3.js-observer {
+  animation-name: frontAnimationOpacity;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+.js-fadeUp__card4 {
+  opacity: 0;
+}
+.js-fadeUp__card4.js-observer {
+  animation-name: frontAnimationOpacity;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+.js-fadeUp__card5 {
+  opacity: 0;
+}
+.js-fadeUp__card5.js-observer {
+  animation-name: frontAnimationOpacity;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes frontAnimationOpacity {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
 /* ローディング画面 */
 #loading {
   margin-top: -1rem;
@@ -3062,7 +3132,7 @@ canvas {
   left: 0;
 }
 .card-body {
-  height: 10rem;
+  height: auto;
 }
 .card-inner {
   margin: 1rem 0.5rem;
@@ -3071,6 +3141,12 @@ canvas {
 .card-text {
   height: 7rem;
   width: 5rem;
+}
+.card-link {
+  padding: 2rem 0 0;
+  margin-bottom: 2rem;
+  border-bottom: solid;
+  display: inline-block;
 }
 .swiper-concept {
   width: 100vw;
