@@ -188,106 +188,104 @@
         <h2 class="js-fadeUp title" id="products">
           <p class="c-title--section c-margin-center">制作物</p>
         </h2>
-        <div class="p-products__swiper">
+        <article class="js-fadeUp p-products__swiper swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <figure class="swiper-slide">
+              <?php
+              $page = get_page_by_path('chunta', OBJECT, 'product');
+              $page_id = $page->ID;
+              $permalink = get_permalink($page_id);; ?>
+              <figcaption>
+                <a href="<?php echo $permalink; ?>">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/bird.png" alt="アイキャッチ画像" class="img">
+                </a>
+              </figcaption>
+              <section class="card-inner">
+                <h5 class="card-title">
+                  <?php echo get_the_title($page); ?>
+                </h5>
+                <p class="card-link">
+                  <a href="<?php echo $permalink; ?>">
+                    詳しく見る
+                  </a>
+                </p>
+              </section>
+            </figure>
+            <figure class="swiper-slide">
+              <?php
+              $page = get_page_by_path('gotenyama-no-huji-css-animation', OBJECT, 'product');
+              $page_id = $page->ID;
+              $permalink = get_permalink($page_id);
+              ?>
+              <figcaption>
+                <a href="<?php echo $permalink; ?>">
+                  <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
+                </a>
+              </figcaption>
+              <section class="card-inner">
+                <h5 class="card-title">
+                  <?php echo get_the_title($page); ?>
+                </h5>
+                <p class="card-link">
+                  <a href="<?php echo $permalink; ?>">
+                    詳しく見る
+                  </a>
+                </p>
+              </section>
+            </figure>
+            <figure class="swiper-slide">
+              <?php
+              $page = get_page_by_path('hamburger', OBJECT, 'product');
+              $page_id = $page->ID;
+              $permalink = get_permalink($page_id);
+              ?>
+              <figcaption>
+                <a href="<?php echo $permalink; ?>">
+                  <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
+                </a>
+              </figcaption>
+              <section class="card-inner">
+                <h5 class="card-title">
+                  <?php echo get_the_title($page); ?>
+                </h5>
+                <p class="card-link">
+                  <a href="<?php echo $permalink; ?>">
+                    詳しく見る
+                  </a>
+                </p>
+              </section>
+            </figure>
+            <figure class="swiper-slide">
+              <?php
+              $page = get_page_by_path('viteTemplate', OBJECT, 'product');
+              $page_id = $page->ID;
+              $permalink = get_permalink($page_id);
+              ?>
+              <figcaption>
+                <a href="<?php echo $permalink; ?>">
+                  <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
+                </a>
+              </figcaption>
+              <section class="card-inner">
+                <h5 class="card-title">
+                  <?php echo get_the_title($page); ?>
+                </h5>
+                <p class="card-link">
+                  <a href="<?php echo $permalink; ?>">
+                    詳しく見る
+                  </a>
+                </p>
+              </section>
+            </figure>
+          </div>
 
-          <article class="js-fadeUp swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <figure class="swiper-slide">
-                <?php
-                $page = get_page_by_path('chunta', OBJECT, 'product');
-                $page_id = $page->ID;
-                $permalink = get_permalink($page_id);; ?>
-                <figcaption>
-                  <a href="<?php echo $permalink; ?>">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/bird.png" alt="アイキャッチ画像" class="img">
-                  </a>
-                </figcaption>
-                <section class="card-inner">
-                  <h5 class="card-title">
-                    <?php echo get_the_title($page); ?>
-                  </h5>
-                  <p class="card-link">
-                    <a href="<?php echo $permalink; ?>">
-                      詳しく見る
-                    </a>
-                  </p>
-                </section>
-              </figure>
-              <figure class="swiper-slide">
-                <?php
-                $page = get_page_by_path('gotenyama-no-huji-css-animation', OBJECT, 'product');
-                $page_id = $page->ID;
-                $permalink = get_permalink($page_id);
-                ?>
-                <figcaption>
-                  <a href="<?php echo $permalink; ?>">
-                    <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
-                  </a>
-                </figcaption>
-                <section class="card-inner">
-                  <h5 class="card-title">
-                    <?php echo get_the_title($page); ?>
-                  </h5>
-                  <p class="card-link">
-                    <a href="<?php echo $permalink; ?>">
-                      詳しく見る
-                    </a>
-                  </p>
-                </section>
-              </figure>
-              <figure class="swiper-slide">
-                <?php
-                $page = get_page_by_path('hamburger', OBJECT, 'product');
-                $page_id = $page->ID;
-                $permalink = get_permalink($page_id);
-                ?>
-                <figcaption>
-                  <a href="<?php echo $permalink; ?>">
-                    <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
-                  </a>
-                </figcaption>
-                <section class="card-inner">
-                  <h5 class="card-title">
-                    <?php echo get_the_title($page); ?>
-                  </h5>
-                  <p class="card-link">
-                    <a href="<?php echo $permalink; ?>">
-                      詳しく見る
-                    </a>
-                  </p>
-                </section>
-              </figure>
-              <figure class="swiper-slide">
-                <?php
-                $page = get_page_by_path('viteTemplate', OBJECT, 'product');
-                $page_id = $page->ID;
-                $permalink = get_permalink($page_id);
-                ?>
-                <figcaption>
-                  <a href="<?php echo $permalink; ?>">
-                    <img src="<?php echo get_the_post_thumbnail_url($page_id); ?>" alt="アイキャッチ画像" class="img">
-                  </a>
-                </figcaption>
-                <section class="card-inner">
-                  <h5 class="card-title">
-                    <?php echo get_the_title($page); ?>
-                  </h5>
-                  <p class="card-link">
-                    <a href="<?php echo $permalink; ?>">
-                      詳しく見る
-                    </a>
-                  </p>
-                </section>
-              </figure>
-            </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+        </article>
 
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- If we need navigation buttons -->
-          </article>
-        </div>
       </section>
 
       <section class="c-background-opacity p-skill">
