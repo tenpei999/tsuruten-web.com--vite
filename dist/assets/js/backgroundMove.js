@@ -9,6 +9,7 @@ const backgroundUp = () => {
       layer23.style.marginTop = "2550px";
     });
     window.addEventListener("scroll", () => {
+      event.preventDefault();
       [layer2, layer22, layer23].forEach((ele) => ele.style.marginTop = "unset");
     });
     "scroll load".split(" ").forEach((MountainUp) => {

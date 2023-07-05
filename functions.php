@@ -318,7 +318,7 @@ add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 
 function imagepassshort($arg)
 {
-  $content = str_replace('"img/', '"' . get_bloginfo('template_directory') . '/img/', $arg);
+  $content = str_replace('"img/', '"' .  get_template_directory_uri()  . '/img/', $arg);
   return $content;
 }
 add_action('the_content', 'imagepassshort');

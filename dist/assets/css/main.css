@@ -864,6 +864,8 @@ button.swiper-pagination-bullet {
   left: 25%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox 64以降 */
+  -ms-overflow-style: none; /* Firefox 63以前 */
 }
 .l-main--custom-post {
   margin-top: -32px;

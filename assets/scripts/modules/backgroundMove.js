@@ -63,7 +63,7 @@ export const backgroundUp = () => {
 export const backgroundFollowing = () => {
   const layer10 = document.querySelector('.layer-10');
   const layer11 = document.querySelector('.layer-11');
-  
+
   window.onscroll = function () {
     //ページ上端からの距離を検知
     const elmOffsetY = 0;
