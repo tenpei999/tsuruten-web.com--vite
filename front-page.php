@@ -286,8 +286,7 @@
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
             <!-- If we need navigation buttons -->
-        </div>
-        </article>
+          </article>
         </div>
       </section>
 
