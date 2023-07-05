@@ -18,15 +18,17 @@ export const backgroundUp = () => {
       window.addEventListener(MountainUp, () => {
 
         const winHeight = window.pageYOffset;                              //ページ上端からの距離を検知
-        const elmOffsetY = 2250;                                            //'.layer-2'のY座標における絶対位置
-        const winStart = 780 + elmOffsetY;
-        const win2Start = 410 + elmOffsetY;
-        const win3Start = 250 + elmOffsetY;
+        const elmOffsetY = 2400;                                            //'.layer-2'のY座標における絶対位置
+        const winStart = 820 + elmOffsetY;
+        const win2Start = 420 + elmOffsetY;
+        const win3Start = 270 + elmOffsetY;
         const offsetMove = winStart - winHeight * 0.3333;                             // 'layer-2'のmargin-top を求める条件式
         const offset2Move = win2Start - winHeight * 0.15;                             // 'layer-2'のmargin-top を求める条件式
         const offset3Move = win3Start - winHeight * 0.1;                             // 'layer-2'のmargin-top を求める条件式   
 
-        if (winHeight < 2000) {
+        console.log(elmOffsetY);
+
+        if (winHeight < 3000) {
           [layer2, layer22, layer23].forEach(ele => ele.classList.add('up'));
 
           const layer2Up = document.querySelector('.layer-2.up');

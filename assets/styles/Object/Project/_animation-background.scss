@@ -14,7 +14,7 @@
     display: block;
     top: 140px;
     width: 1920px;
-    height: 3076px;
+    height: 3260px;
     background: url($base-dir + 'images/yama-baseNew.jpg') bottom no-repeat;
     background-size: 3076px 1920px;
     z-index: 200;
@@ -81,7 +81,7 @@
       position: absolute;
       height: 500px;
       width: 500px;
-      top: 1450px;
+      top: 1640px;
       left: 500px;
       background-image: url($base-dir + 'images/cloud-single.png');
       display: block;
@@ -92,7 +92,7 @@
 
     .layer-5 {
       position: absolute;
-      top: 1650px;
+      top: 1843px;
       left: 330px;
       background: url($base-dir + 'images/cloud-hide.png') no-repeat;
       display: block;
