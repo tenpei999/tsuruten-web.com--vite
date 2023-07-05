@@ -285,7 +285,9 @@
           <div class="swiper-pagination"></div>
           <!-- If we need navigation buttons -->
         </article>
-
+        <nav class="c-margin-center p-products__link">
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('products'))); ?>" class="c-text--link text">制作物一覧はこちら</a>
+        </nav>
       </section>
 
       <section class="c-background-opacity p-skill">
@@ -297,7 +299,7 @@
         </h3>
         <section class="cell__li first">
           <div class="js-fadeUp img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/html-g.png" alt="">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/html-g.png" alt="HTMLコード">
           </div>
           <h4 class="js-fadeUp title">
             <p class="c-title--content">HTMLマークアップ</p>
@@ -306,7 +308,7 @@
             <li class="js-fadeUp li">
               <span class="c-check"></span>
               <p>
-                HTML Living Standard に準拠したセマンティックかつアクセシビリティに優れたマークアップ
+                <a href="https://momdo.github.io/html/dom.html#kinds-of-content">HTML Living Standard</a> に準拠したセマンティックかつアクセシビリティに優れたマークアップ
               </p>
             </li>
             <li class="js-fadeUp li">
@@ -323,7 +325,7 @@
         </section>
         <section class="cell__li">
           <div class="js-fadeUp img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/interior-design-g70f9d930b_1280.jpg" alt="css" class="icon">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/interior-design-g70f9d930b_1280.jpg" alt="CSSによる鮮やかな装飾" class="icon">
           </div>
           <h4 class="js-fadeUp title">
             <p class="c-title--content">CSSスタイリング</p>
@@ -344,13 +346,13 @@
             <li class="js-fadeUp li">
               <span class="c-check"></span>
               <p>
-                保守しやすく、予測しやすく、拡張しやすく、再利用しやすいといった「よいCSS設計の目指す4つのゴール」を常に心がけることにより読みやすくかつ作業負担が少ないコーディング
+                保守しやすく、予測しやすく、拡張しやすく、再利用しやすいといった<a href="https://philipwalton.com/articles/css-architecture/">「よいCSS設計の目指す4つのゴール」</a>を常に心がけることにより読みやすくかつ作業負担が少ないコーディング
               </p>
             </li>
             <li class="js-fadeUp li">
               <span class="c-check"></span>
               <p>
-                CSS設計手法にFLOCSSとBEMを採用することによる安定したカスケーディング管理
+                CSS設計手法に<a href="https://github.com/hiloki/flocss">FLOCSS</a>を採用することによる安定したカスケーディング管理
               </p>
             </li>
           </ul>
