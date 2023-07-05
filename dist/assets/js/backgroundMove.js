@@ -9,7 +9,6 @@ const backgroundUp = () => {
       layer23.style.marginTop = "2550px";
     });
     window.addEventListener("scroll", () => {
-      event.preventDefault();
       [layer2, layer22, layer23].forEach((ele) => ele.style.marginTop = "unset");
     });
     "scroll load".split(" ").forEach((MountainUp) => {
@@ -27,9 +26,9 @@ const backgroundUp = () => {
           const layer2Up = document.querySelector(".layer-2.up");
           const layer22Up = document.querySelector(".layer-2-2.up");
           const layer23Up = document.querySelector(".layer-2-3.up");
-          layer2Up.style.marginTop = offsetMove + "px";
-          layer22Up.style.marginTop = offset2Move + "px";
-          layer23Up.style.marginTop = offset3Move + "px";
+          layer2Up.style.transform = "translateY(" + offsetMove + "px)";
+          layer22Up.style.transform = "translateY(" + offset2Move + "px)";
+          layer23Up.style.transform = "translateY(" + offset3Move + "px)";
         } else {
           [layer2, layer22, layer23].forEach((ele) => {
             ele.classList.remove("up");

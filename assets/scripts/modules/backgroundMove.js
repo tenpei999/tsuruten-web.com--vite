@@ -33,9 +33,10 @@ export const backgroundUp = () => {
           const layer22Up = document.querySelector('.layer-2-2.up');
           const layer23Up = document.querySelector('.layer-2-3.up');
 
-          layer2Up.style.marginTop = offsetMove + 'px';
-          layer22Up.style.marginTop = offset2Move + 'px';
-          layer23Up.style.marginTop = offset3Move + 'px';
+          layer2Up.style.transform = 'translateY(' + offsetMove + 'px)';
+          layer22Up.style.transform = 'translateY(' + offset2Move + 'px)';
+          layer23Up.style.transform = 'translateY(' + offset3Move + 'px)';
+          
 
           //アニメーションをする前の状態を表すクラス名'.up'を付与し、合わせて'layer-2'を下方に待機させる。
         } else {
