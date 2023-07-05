@@ -17,7 +17,7 @@
 
     <body <?php body_class('l-body_is-concept_page'); ?>>
     <?php else : ?>
-      <?php body_class(); ?>
+      <body <?php body_class(); ?>>
     <?php endif; ?>
 
 
